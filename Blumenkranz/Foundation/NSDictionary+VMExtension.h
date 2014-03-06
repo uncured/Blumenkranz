@@ -1,0 +1,3 @@
+@interface NSDictionary (VMExtension)
+
+@end
