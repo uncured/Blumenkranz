@@ -3,3 +3,5 @@
 
 #import "NSObject+VMExtension.h"
 #import "VMTypes.h"
+#import "VMAssertion.h"
+#import "VMPlatform.h"

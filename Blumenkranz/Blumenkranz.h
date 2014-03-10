@@ -6,6 +6,7 @@
 //Blumenkranz/Foundation/Macro
 #import "VMAssertion.h"
 #import "VMTypes.h"
+#import "VMPlatform.h"
 //Blumenkranz/Foundation/RootObjects
 #import "NSObject+VMExtension.h"
 //Blumenkranz/Foundation/Text
@@ -15,5 +16,7 @@
 //Blumenkranz/UI/Graphics
 #import "UIColor+VMExtension.h"
 #import "UIImage+VMExtension.h"
+//Blumenkranz/UI/Controls/VMSequenceView
+#import "VMSequenceView.h"
 //Blumenkranz/Services
 #import "VMGameCenterService.h"

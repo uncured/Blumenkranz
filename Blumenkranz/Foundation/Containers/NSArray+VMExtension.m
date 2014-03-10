@@ -20,7 +20,9 @@ NSString * const NSArrayVMExtensionDomain = @"ru.visulamyth.blumenkranz.NSArray_
             if ([objectToMerge respondsToSelector:@selector(copy)]) {
                 objectToMerge = [objectToMerge copy];
             } else {
-                *error = [NSArray vm_objectCopyError:object];
+                if (error) {
+                    *error = [NSArray vm_objectCopyError:object];
+                }
                 return nil;
             }
         }

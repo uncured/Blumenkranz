@@ -2,6 +2,16 @@
 
 @implementation UIImage (VMExtension)
 
++ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size {
+    CGRect imageRect = CGRectMake(0, 0, size.width, size.height);
+    UIGraphicsBeginImageContextWithOptions(size, NO, .0f);
+    [color setFill];
+    UIRectFill(imageRect);
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
 + (UIImage *)hollowPattern {
     CGFloat side = 16;
     CGSize size = CGSizeMake(side, side);

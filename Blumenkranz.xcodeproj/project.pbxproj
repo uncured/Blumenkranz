@@ -49,6 +49,9 @@
 		6E7DBA1F18CB9739004B876C /* NSString+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7DBA1D18CB9739004B876C /* NSString+VMExtension.m */; };
 		6E839A3C18CB893700664C67 /* NSDictionary+VMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E839A3A18CB893700664C67 /* NSDictionary+VMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E839A3D18CB893700664C67 /* NSDictionary+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E839A3B18CB893700664C67 /* NSDictionary+VMExtension.m */; };
+		6E9B1A4318CDE3EE0024FF97 /* VMSequenceView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E9B1A4118CDE3EE0024FF97 /* VMSequenceView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E9B1A4418CDE3EE0024FF97 /* VMSequenceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B1A4218CDE3EE0024FF97 /* VMSequenceView.m */; };
+		6E9B1A4618CDE5810024FF97 /* VMPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E9B1A4518CDE5810024FF97 /* VMPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6EA8DAED18C8FB1D00F04908 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA8DAEC18C8FB1D00F04908 /* UIKit.framework */; };
 		6EA8DAEE18C8FB2D00F04908 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA8DAEC18C8FB1D00F04908 /* UIKit.framework */; };
 		6EA8DAF018C8FB8B00F04908 /* Blumenkranz.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E37F12B18C8F734000BD94B /* Blumenkranz.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -123,6 +126,9 @@
 		6E7DBA1D18CB9739004B876C /* NSString+VMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+VMExtension.m"; sourceTree = "<group>"; };
 		6E839A3A18CB893700664C67 /* NSDictionary+VMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+VMExtension.h"; sourceTree = "<group>"; };
 		6E839A3B18CB893700664C67 /* NSDictionary+VMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+VMExtension.m"; sourceTree = "<group>"; };
+		6E9B1A4118CDE3EE0024FF97 /* VMSequenceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMSequenceView.h; sourceTree = "<group>"; };
+		6E9B1A4218CDE3EE0024FF97 /* VMSequenceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMSequenceView.m; sourceTree = "<group>"; };
+		6E9B1A4518CDE5810024FF97 /* VMPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMPlatform.h; sourceTree = "<group>"; };
 		6EA8DAEC18C8FB1D00F04908 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6EA8DAFE18C8FEB400F04908 /* Blumenkranz.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Blumenkranz.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EA8DB0318C8FEB400F04908 /* BlumenkranzResources-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BlumenkranzResources-Info.plist"; sourceTree = "<group>"; };
@@ -256,6 +262,7 @@
 		6E37F14E18C8F836000BD94B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				6E9B1A3F18CDE3DE0024FF97 /* Controls */,
 				6E7DBA0218CB8A1F004B876C /* Graphics */,
 			);
 			path = UI;
@@ -277,6 +284,7 @@
 			children = (
 				6E7DBA0C18CB8AD9004B876C /* VMAssertion.h */,
 				6EFA223518CBACC300F7EA40 /* VMTypes.h */,
+				6E9B1A4518CDE5810024FF97 /* VMPlatform.h */,
 			);
 			path = Macro;
 			sourceTree = "<group>";
@@ -312,6 +320,23 @@
 				6E0D7DBE18CD088100E99516 /* NSMutableArray+VMExtension.m */,
 			);
 			path = Containers;
+			sourceTree = "<group>";
+		};
+		6E9B1A3F18CDE3DE0024FF97 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				6E9B1A4018CDE3DE0024FF97 /* VMSequenceView */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		6E9B1A4018CDE3DE0024FF97 /* VMSequenceView */ = {
+			isa = PBXGroup;
+			children = (
+				6E9B1A4118CDE3EE0024FF97 /* VMSequenceView.h */,
+				6E9B1A4218CDE3EE0024FF97 /* VMSequenceView.m */,
+			);
+			path = VMSequenceView;
 			sourceTree = "<group>";
 		};
 		6EA8DB0118C8FEB400F04908 /* BlumenkranzResources */ = {
@@ -359,6 +384,7 @@
 			files = (
 				6EA8DAF018C8FB8B00F04908 /* Blumenkranz.h in Headers */,
 				6EFA223118CBAA6200F7EA40 /* VMGameCenterService.h in Headers */,
+				6E9B1A4318CDE3EE0024FF97 /* VMSequenceView.h in Headers */,
 				6E7DBA1E18CB9739004B876C /* NSString+VMExtension.h in Headers */,
 				6E0D7DBF18CD088100E99516 /* NSMutableArray+VMExtension.h in Headers */,
 				6EFA223618CBACC300F7EA40 /* VMTypes.h in Headers */,
@@ -366,6 +392,7 @@
 				6E7DBA0518CB8A31004B876C /* UIColor+VMExtension.h in Headers */,
 				6EA8DB1418C9019300F04908 /* VMBlumenkranz.h in Headers */,
 				6E0D7DBB18CCFF4200E99516 /* NSMutableDictionary+VMExtension.h in Headers */,
+				6E9B1A4618CDE5810024FF97 /* VMPlatform.h in Headers */,
 				6E7DBA1518CB8D0A004B876C /* VMRandom.h in Headers */,
 				6E7DBA0D18CB8AD9004B876C /* VMAssertion.h in Headers */,
 				6E7DBA0018CB89E6004B876C /* NSArray+VMExtension.h in Headers */,
@@ -521,6 +548,7 @@
 				6EA8DB1518C9019300F04908 /* VMBlumenkranz.m in Sources */,
 				6E0D7DC018CD088100E99516 /* NSMutableArray+VMExtension.m in Sources */,
 				6E0D7DBC18CCFF4200E99516 /* NSMutableDictionary+VMExtension.m in Sources */,
+				6E9B1A4418CDE3EE0024FF97 /* VMSequenceView.m in Sources */,
 				6E7DBA1F18CB9739004B876C /* NSString+VMExtension.m in Sources */,
 				6E7DBA0A18CB8A8B004B876C /* UIImage+VMExtension.m in Sources */,
 				6EFA223218CBAA6200F7EA40 /* VMGameCenterService.m in Sources */,

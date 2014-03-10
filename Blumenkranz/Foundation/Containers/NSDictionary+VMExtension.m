@@ -26,7 +26,9 @@ NSString * const NSDictionaryVMExtensionDomain = @"ru.visulamyth.blumenkranz.NSD
                 if ([object respondsToSelector:@selector(copy)]) {
                     object = [object copy];
                 } else {
-                    *error = [NSDictionary vm_objectCopyError:keyForMerge];
+                    if (error) {
+                        *error = [NSDictionary vm_objectCopyError:keyForMerge];
+                    }
                     return nil;
                 }
             }
@@ -50,7 +52,9 @@ NSString * const NSDictionaryVMExtensionDomain = @"ru.visulamyth.blumenkranz.NSD
                     if ([mergeObject respondsToSelector:@selector(copy)]) {
                         mergeObject = [mergeObject copy];
                     } else {
-                        *error = [NSDictionary vm_objectCopyError:keyForMerge];
+                        if (error) {
+                            *error = [NSDictionary vm_objectCopyError:keyForMerge];
+                        }
                         return nil;
                     }
                 }
@@ -78,7 +82,9 @@ NSString * const NSDictionaryVMExtensionDomain = @"ru.visulamyth.blumenkranz.NSD
                     }
 
                 } else {
-                    *error = [NSDictionary vm_objectDeepMergeError:existingObject with:mergeObject];
+                    if (error) {
+                        *error = [NSDictionary vm_objectDeepMergeError:existingObject with:mergeObject];
+                    }
                     return nil;
                 }
 

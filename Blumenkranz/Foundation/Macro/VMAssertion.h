@@ -81,4 +81,14 @@
         NSAssert(NO, @"Object doesn't exist in method %@.", NSStringFromSelector(_cmd)); \
     }
 
+/*
+ * Check array to contain only given type of objects
+ */
+#define VMArrayOfGenericType(array, objectClass) \
+    for (id arrayObject in array) { \
+        if (![arrayObject isKindOfClass:objectClass]) { \
+            NSAssert(NO, @"Object [%@] is not of type %@ in method %@.", arrayObject, objectClass, NSStringFromSelector(_cmd)); \
+        } \
+    }
+
 #endif
