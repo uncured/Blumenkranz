@@ -23,23 +23,43 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		6E0D7DBB18CCFF4200E99516 /* NSMutableDictionary+VMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E0D7DB918CCFF4200E99516 /* NSMutableDictionary+VMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E0D7DBC18CCFF4200E99516 /* NSMutableDictionary+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D7DBA18CCFF4200E99516 /* NSMutableDictionary+VMExtension.m */; };
+		6E0D7DBF18CD088100E99516 /* NSMutableArray+VMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E0D7DBD18CD088100E99516 /* NSMutableArray+VMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E0D7DC018CD088100E99516 /* NSMutableArray+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D7DBE18CD088100E99516 /* NSMutableArray+VMExtension.m */; };
 		6E37F12718C8F734000BD94B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E37F12618C8F734000BD94B /* Foundation.framework */; };
 		6E37F13518C8F734000BD94B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E37F13418C8F734000BD94B /* XCTest.framework */; };
 		6E37F13618C8F734000BD94B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E37F12618C8F734000BD94B /* Foundation.framework */; };
 		6E37F13B18C8F734000BD94B /* libBlumenkranz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E37F12318C8F734000BD94B /* libBlumenkranz.a */; };
 		6E37F14118C8F734000BD94B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E37F13F18C8F734000BD94B /* InfoPlist.strings */; };
 		6E37F14318C8F734000BD94B /* BlumenkranzTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E37F14218C8F734000BD94B /* BlumenkranzTests.m */; };
-		6E37F15118C8F853000BD94B /* NSDictionary+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E37F15018C8F853000BD94B /* NSDictionary+VMExtension.m */; };
-		6E37F15218C8F853000BD94B /* NSDictionary+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E37F15018C8F853000BD94B /* NSDictionary+VMExtension.m */; };
 		6E37F15418C8F917000BD94B /* BlumenkranzTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E37F13E18C8F734000BD94B /* BlumenkranzTests-Info.plist */; };
+		6E7DBA0018CB89E6004B876C /* NSArray+VMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E7DB9FE18CB89E6004B876C /* NSArray+VMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E7DBA0118CB89E6004B876C /* NSArray+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7DB9FF18CB89E6004B876C /* NSArray+VMExtension.m */; };
+		6E7DBA0518CB8A31004B876C /* UIColor+VMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E7DBA0318CB8A31004B876C /* UIColor+VMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E7DBA0618CB8A31004B876C /* UIColor+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7DBA0418CB8A31004B876C /* UIColor+VMExtension.m */; };
+		6E7DBA0918CB8A8B004B876C /* UIImage+VMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E7DBA0718CB8A8B004B876C /* UIImage+VMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E7DBA0A18CB8A8B004B876C /* UIImage+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7DBA0818CB8A8B004B876C /* UIImage+VMExtension.m */; };
+		6E7DBA0D18CB8AD9004B876C /* VMAssertion.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E7DBA0C18CB8AD9004B876C /* VMAssertion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E7DBA1118CB8C77004B876C /* NSObject+VMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E7DBA0F18CB8C77004B876C /* NSObject+VMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E7DBA1218CB8C77004B876C /* NSObject+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7DBA1018CB8C77004B876C /* NSObject+VMExtension.m */; };
+		6E7DBA1518CB8D0A004B876C /* VMRandom.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E7DBA1318CB8D0A004B876C /* VMRandom.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E7DBA1618CB8D0A004B876C /* VMRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7DBA1418CB8D0A004B876C /* VMRandom.m */; };
+		6E7DBA1E18CB9739004B876C /* NSString+VMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E7DBA1C18CB9739004B876C /* NSString+VMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E7DBA1F18CB9739004B876C /* NSString+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7DBA1D18CB9739004B876C /* NSString+VMExtension.m */; };
+		6E839A3C18CB893700664C67 /* NSDictionary+VMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E839A3A18CB893700664C67 /* NSDictionary+VMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E839A3D18CB893700664C67 /* NSDictionary+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E839A3B18CB893700664C67 /* NSDictionary+VMExtension.m */; };
 		6EA8DAED18C8FB1D00F04908 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA8DAEC18C8FB1D00F04908 /* UIKit.framework */; };
 		6EA8DAEE18C8FB2D00F04908 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA8DAEC18C8FB1D00F04908 /* UIKit.framework */; };
 		6EA8DAF018C8FB8B00F04908 /* Blumenkranz.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E37F12B18C8F734000BD94B /* Blumenkranz.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6EA8DAF118C8FB8D00F04908 /* NSDictionary+VMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E37F14F18C8F853000BD94B /* NSDictionary+VMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6EA8DB0018C8FEB400F04908 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA8DAFF18C8FEB400F04908 /* CoreFoundation.framework */; };
 		6EA8DB0618C8FEB400F04908 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EA8DB0418C8FEB400F04908 /* InfoPlist.strings */; };
 		6EA8DB1418C9019300F04908 /* VMBlumenkranz.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EA8DB1218C9019300F04908 /* VMBlumenkranz.h */; };
 		6EA8DB1518C9019300F04908 /* VMBlumenkranz.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA8DB1318C9019300F04908 /* VMBlumenkranz.m */; };
+		6EFA222E18CBAA0900F7EA40 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E37F12618C8F734000BD94B /* Foundation.framework */; };
+		6EFA223118CBAA6200F7EA40 /* VMGameCenterService.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EFA222F18CBAA6200F7EA40 /* VMGameCenterService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6EFA223218CBAA6200F7EA40 /* VMGameCenterService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFA223018CBAA6200F7EA40 /* VMGameCenterService.m */; };
+		6EFA223418CBAA7500F7EA40 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EFA223318CBAA7500F7EA40 /* GameKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		6EFA223618CBACC300F7EA40 /* VMTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EFA223518CBACC300F7EA40 /* VMTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +94,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E0D7DB918CCFF4200E99516 /* NSMutableDictionary+VMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+VMExtension.h"; sourceTree = "<group>"; };
+		6E0D7DBA18CCFF4200E99516 /* NSMutableDictionary+VMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+VMExtension.m"; sourceTree = "<group>"; };
+		6E0D7DBD18CD088100E99516 /* NSMutableArray+VMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+VMExtension.h"; sourceTree = "<group>"; };
+		6E0D7DBE18CD088100E99516 /* NSMutableArray+VMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+VMExtension.m"; sourceTree = "<group>"; };
 		6E37F12318C8F734000BD94B /* libBlumenkranz.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBlumenkranz.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E37F12618C8F734000BD94B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6E37F12A18C8F734000BD94B /* Blumenkranz-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Blumenkranz-Prefix.pch"; sourceTree = "<group>"; };
@@ -83,17 +107,33 @@
 		6E37F13E18C8F734000BD94B /* BlumenkranzTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BlumenkranzTests-Info.plist"; sourceTree = "<group>"; };
 		6E37F14018C8F734000BD94B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6E37F14218C8F734000BD94B /* BlumenkranzTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlumenkranzTests.m; sourceTree = "<group>"; };
-		6E37F14F18C8F853000BD94B /* NSDictionary+VMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+VMExtension.h"; sourceTree = "<group>"; };
-		6E37F15018C8F853000BD94B /* NSDictionary+VMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+VMExtension.m"; sourceTree = "<group>"; };
 		6E37F15318C8F917000BD94B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6E7DB9FE18CB89E6004B876C /* NSArray+VMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+VMExtension.h"; sourceTree = "<group>"; };
+		6E7DB9FF18CB89E6004B876C /* NSArray+VMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+VMExtension.m"; sourceTree = "<group>"; };
+		6E7DBA0318CB8A31004B876C /* UIColor+VMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+VMExtension.h"; sourceTree = "<group>"; };
+		6E7DBA0418CB8A31004B876C /* UIColor+VMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+VMExtension.m"; sourceTree = "<group>"; };
+		6E7DBA0718CB8A8B004B876C /* UIImage+VMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+VMExtension.h"; sourceTree = "<group>"; };
+		6E7DBA0818CB8A8B004B876C /* UIImage+VMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+VMExtension.m"; sourceTree = "<group>"; };
+		6E7DBA0C18CB8AD9004B876C /* VMAssertion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMAssertion.h; sourceTree = "<group>"; };
+		6E7DBA0F18CB8C77004B876C /* NSObject+VMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+VMExtension.h"; sourceTree = "<group>"; };
+		6E7DBA1018CB8C77004B876C /* NSObject+VMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+VMExtension.m"; sourceTree = "<group>"; };
+		6E7DBA1318CB8D0A004B876C /* VMRandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMRandom.h; sourceTree = "<group>"; };
+		6E7DBA1418CB8D0A004B876C /* VMRandom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMRandom.m; sourceTree = "<group>"; };
+		6E7DBA1C18CB9739004B876C /* NSString+VMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+VMExtension.h"; sourceTree = "<group>"; };
+		6E7DBA1D18CB9739004B876C /* NSString+VMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+VMExtension.m"; sourceTree = "<group>"; };
+		6E839A3A18CB893700664C67 /* NSDictionary+VMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+VMExtension.h"; sourceTree = "<group>"; };
+		6E839A3B18CB893700664C67 /* NSDictionary+VMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+VMExtension.m"; sourceTree = "<group>"; };
 		6EA8DAEC18C8FB1D00F04908 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6EA8DAFE18C8FEB400F04908 /* Blumenkranz.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Blumenkranz.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		6EA8DAFF18C8FEB400F04908 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		6EA8DB0318C8FEB400F04908 /* BlumenkranzResources-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BlumenkranzResources-Info.plist"; sourceTree = "<group>"; };
 		6EA8DB0518C8FEB400F04908 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6EA8DB0718C8FEB400F04908 /* BlumenkranzResources-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BlumenkranzResources-Prefix.pch"; sourceTree = "<group>"; };
 		6EA8DB1218C9019300F04908 /* VMBlumenkranz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMBlumenkranz.h; sourceTree = "<group>"; };
 		6EA8DB1318C9019300F04908 /* VMBlumenkranz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMBlumenkranz.m; sourceTree = "<group>"; };
+		6EFA222F18CBAA6200F7EA40 /* VMGameCenterService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMGameCenterService.h; sourceTree = "<group>"; };
+		6EFA223018CBAA6200F7EA40 /* VMGameCenterService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMGameCenterService.m; sourceTree = "<group>"; };
+		6EFA223318CBAA7500F7EA40 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		6EFA223518CBACC300F7EA40 /* VMTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMTypes.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +143,7 @@
 			files = (
 				6E37F12718C8F734000BD94B /* Foundation.framework in Frameworks */,
 				6EA8DAED18C8FB1D00F04908 /* UIKit.framework in Frameworks */,
+				6EFA223418CBAA7500F7EA40 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,7 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EA8DB0018C8FEB400F04908 /* CoreFoundation.framework in Frameworks */,
+				6EFA222E18CBAA0900F7EA40 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,10 +193,10 @@
 		6E37F12518C8F734000BD94B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6EFA223318CBAA7500F7EA40 /* GameKit.framework */,
 				6EA8DAEC18C8FB1D00F04908 /* UIKit.framework */,
 				6E37F12618C8F734000BD94B /* Foundation.framework */,
 				6E37F13418C8F734000BD94B /* XCTest.framework */,
-				6EA8DAFF18C8FEB400F04908 /* CoreFoundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -163,6 +204,7 @@
 		6E37F12818C8F734000BD94B /* Blumenkranz */ = {
 			isa = PBXGroup;
 			children = (
+				6EE9BC5318CBA999000B2300 /* Services */,
 				6EA8DB1118C9017400F04908 /* Framework */,
 				6E37F14D18C8F836000BD94B /* Foundation */,
 				6E37F14E18C8F836000BD94B /* UI */,
@@ -201,8 +243,12 @@
 		6E37F14D18C8F836000BD94B /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				6E37F14F18C8F853000BD94B /* NSDictionary+VMExtension.h */,
-				6E37F15018C8F853000BD94B /* NSDictionary+VMExtension.m */,
+				6E7DBA1B18CB9728004B876C /* Text */,
+				6E7DBA0E18CB8C57004B876C /* RootObjects */,
+				6E7DBA0B18CB8AC9004B876C /* Macro */,
+				6E839A3918CB893700664C67 /* Containers */,
+				6E7DBA1318CB8D0A004B876C /* VMRandom.h */,
+				6E7DBA1418CB8D0A004B876C /* VMRandom.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -210,8 +256,62 @@
 		6E37F14E18C8F836000BD94B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				6E7DBA0218CB8A1F004B876C /* Graphics */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		6E7DBA0218CB8A1F004B876C /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				6E7DBA0318CB8A31004B876C /* UIColor+VMExtension.h */,
+				6E7DBA0418CB8A31004B876C /* UIColor+VMExtension.m */,
+				6E7DBA0718CB8A8B004B876C /* UIImage+VMExtension.h */,
+				6E7DBA0818CB8A8B004B876C /* UIImage+VMExtension.m */,
+			);
+			path = Graphics;
+			sourceTree = "<group>";
+		};
+		6E7DBA0B18CB8AC9004B876C /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				6E7DBA0C18CB8AD9004B876C /* VMAssertion.h */,
+				6EFA223518CBACC300F7EA40 /* VMTypes.h */,
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+		6E7DBA0E18CB8C57004B876C /* RootObjects */ = {
+			isa = PBXGroup;
+			children = (
+				6E7DBA0F18CB8C77004B876C /* NSObject+VMExtension.h */,
+				6E7DBA1018CB8C77004B876C /* NSObject+VMExtension.m */,
+			);
+			path = RootObjects;
+			sourceTree = "<group>";
+		};
+		6E7DBA1B18CB9728004B876C /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				6E7DBA1C18CB9739004B876C /* NSString+VMExtension.h */,
+				6E7DBA1D18CB9739004B876C /* NSString+VMExtension.m */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		6E839A3918CB893700664C67 /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+				6E839A3A18CB893700664C67 /* NSDictionary+VMExtension.h */,
+				6E839A3B18CB893700664C67 /* NSDictionary+VMExtension.m */,
+				6E0D7DB918CCFF4200E99516 /* NSMutableDictionary+VMExtension.h */,
+				6E0D7DBA18CCFF4200E99516 /* NSMutableDictionary+VMExtension.m */,
+				6E7DB9FE18CB89E6004B876C /* NSArray+VMExtension.h */,
+				6E7DB9FF18CB89E6004B876C /* NSArray+VMExtension.m */,
+				6E0D7DBD18CD088100E99516 /* NSMutableArray+VMExtension.h */,
+				6E0D7DBE18CD088100E99516 /* NSMutableArray+VMExtension.m */,
+			);
+			path = Containers;
 			sourceTree = "<group>";
 		};
 		6EA8DB0118C8FEB400F04908 /* BlumenkranzResources */ = {
@@ -241,6 +341,15 @@
 			path = Framework;
 			sourceTree = "<group>";
 		};
+		6EE9BC5318CBA999000B2300 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6EFA222F18CBAA6200F7EA40 /* VMGameCenterService.h */,
+				6EFA223018CBAA6200F7EA40 /* VMGameCenterService.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -249,8 +358,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EA8DAF018C8FB8B00F04908 /* Blumenkranz.h in Headers */,
+				6EFA223118CBAA6200F7EA40 /* VMGameCenterService.h in Headers */,
+				6E7DBA1E18CB9739004B876C /* NSString+VMExtension.h in Headers */,
+				6E0D7DBF18CD088100E99516 /* NSMutableArray+VMExtension.h in Headers */,
+				6EFA223618CBACC300F7EA40 /* VMTypes.h in Headers */,
+				6E7DBA0918CB8A8B004B876C /* UIImage+VMExtension.h in Headers */,
+				6E7DBA0518CB8A31004B876C /* UIColor+VMExtension.h in Headers */,
 				6EA8DB1418C9019300F04908 /* VMBlumenkranz.h in Headers */,
-				6EA8DAF118C8FB8D00F04908 /* NSDictionary+VMExtension.h in Headers */,
+				6E0D7DBB18CCFF4200E99516 /* NSMutableDictionary+VMExtension.h in Headers */,
+				6E7DBA1518CB8D0A004B876C /* VMRandom.h in Headers */,
+				6E7DBA0D18CB8AD9004B876C /* VMAssertion.h in Headers */,
+				6E7DBA0018CB89E6004B876C /* NSArray+VMExtension.h in Headers */,
+				6E839A3C18CB893700664C67 /* NSDictionary+VMExtension.h in Headers */,
+				6E7DBA1118CB8C77004B876C /* NSObject+VMExtension.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,8 +515,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E7DBA1218CB8C77004B876C /* NSObject+VMExtension.m in Sources */,
+				6E7DBA0618CB8A31004B876C /* UIColor+VMExtension.m in Sources */,
+				6E7DBA0118CB89E6004B876C /* NSArray+VMExtension.m in Sources */,
 				6EA8DB1518C9019300F04908 /* VMBlumenkranz.m in Sources */,
-				6E37F15118C8F853000BD94B /* NSDictionary+VMExtension.m in Sources */,
+				6E0D7DC018CD088100E99516 /* NSMutableArray+VMExtension.m in Sources */,
+				6E0D7DBC18CCFF4200E99516 /* NSMutableDictionary+VMExtension.m in Sources */,
+				6E7DBA1F18CB9739004B876C /* NSString+VMExtension.m in Sources */,
+				6E7DBA0A18CB8A8B004B876C /* UIImage+VMExtension.m in Sources */,
+				6EFA223218CBAA6200F7EA40 /* VMGameCenterService.m in Sources */,
+				6E7DBA1618CB8D0A004B876C /* VMRandom.m in Sources */,
+				6E839A3D18CB893700664C67 /* NSDictionary+VMExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,7 +534,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E37F14318C8F734000BD94B /* BlumenkranzTests.m in Sources */,
-				6E37F15218C8F853000BD94B /* NSDictionary+VMExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -694,6 +822,7 @@
 				6EA8DAF618C8FCB200F04908 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6EA8DB0818C8FEB500F04908 /* Build configuration list for PBXNativeTarget "Blumenkranz Resources" */ = {
 			isa = XCConfigurationList;
@@ -702,6 +831,7 @@
 				6EA8DB0A18C8FEB500F04908 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

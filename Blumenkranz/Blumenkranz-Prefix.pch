@@ -1,2 +1,5 @@
 @import Foundation;
 @import UIKit;
+
+#import "NSObject+VMExtension.h"
+#import "VMTypes.h"

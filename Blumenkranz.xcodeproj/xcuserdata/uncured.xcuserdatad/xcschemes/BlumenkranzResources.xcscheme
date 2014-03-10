@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6EA8DAFD18C8FEB400F04908"
-               BuildableName = "BlumenkranzResources.bundle"
+               BuildableName = "Blumenkranz.bundle"
                BlueprintName = "Blumenkranz Resources"
                ReferencedContainer = "container:Blumenkranz.xcodeproj">
             </BuildableReference>
