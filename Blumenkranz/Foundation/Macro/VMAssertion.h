@@ -82,6 +82,14 @@
     }
 
 /*
+ * Check for non-existing of object
+ */
+#define VMNotExist(object) \
+    if (object) { \
+        NSAssert(NO, @"Object exists in method %@.", NSStringFromSelector(_cmd)); \
+    }
+
+/*
  * Check array to contain only given type of objects
  */
 #define VMArrayOfGenericType(array, objectClass) \
@@ -90,5 +98,21 @@
             NSAssert(NO, @"Object [%@] is not of type %@ in method %@.", arrayObject, objectClass, NSStringFromSelector(_cmd)); \
         } \
     }
+
+/*
+ * Check objects to be equal
+ */
+#define VMEqual(leftObject, rightObject) \
+    if (![leftObject isEqual:rightObject]) { \
+        NSAssert(NO, @"Object [%@] is not equal to [%@] in method %@.", leftObject, rightObject, NSStringFromSelector(_cmd)); \
+    } \
+
+/*
+ * Check objects not to be equal
+ */
+#define VMNotEqual(leftObject, rightObject) \
+    if ([leftObject isEqual:rightObject]) { \
+        NSAssert(NO, @"Object [%@] is equal to [%@] in method %@.", leftObject, rightObject, NSStringFromSelector(_cmd)); \
+    } \
 
 #endif

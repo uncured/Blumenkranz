@@ -22,4 +22,19 @@
     return objc_getAssociatedObject(self, @selector(annotation));
 }
 
+#pragma mark Properties introspection
++ (Class)classOfProperty:(NSString *)propertyName {
+    Class propertyClass = nil;
+    objc_property_t property = class_getProperty(self, [propertyName UTF8String]);
+    NSString *propertyAttributes = [NSString stringWithCString:property_getAttributes(property) encoding:NSUTF8StringEncoding];
+    NSArray *splitPropertyAttributes = [propertyAttributes componentsSeparatedByString:@","];
+    if ([splitPropertyAttributes count] > 0){
+        NSString *encodeType = splitPropertyAttributes[0];
+        NSArray *splitEncodeType = [encodeType componentsSeparatedByString:@"\""];
+        NSString *className = splitEncodeType[1];
+        propertyClass = NSClassFromString(className);
+    }
+    return propertyClass;
+}
+
 @end

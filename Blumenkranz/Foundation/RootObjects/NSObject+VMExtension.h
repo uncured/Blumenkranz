@@ -3,4 +3,6 @@
 
 + (instancetype)singletone;
 
++ (Class)classOfProperty:(NSString *)propertyName;
+
 @end

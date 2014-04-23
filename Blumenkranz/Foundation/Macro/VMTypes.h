@@ -4,5 +4,6 @@
 typedef void (^VMBlock)();
 typedef void (^VMErrorBlock)(NSError *);
 typedef void (^VMViewControllerBlock)(UIViewController *);
+typedef id (^VMObjectProvidingBlock)();
 
 #endif

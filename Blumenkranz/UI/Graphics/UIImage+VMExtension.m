@@ -1,4 +1,5 @@
 #import "UIImage+VMExtension.h"
+#import "VMSingletone.h"
 
 @implementation UIImage (VMExtension)
 
@@ -13,6 +14,10 @@
 }
 
 + (UIImage *)hollowPattern {
+    VMStoreAndReturn( [self vm_hollowPatternInner] )
+}
+
++ (UIImage *)vm_hollowPatternInner {
     CGFloat side = 16;
     CGSize size = CGSizeMake(side, side);
     UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);

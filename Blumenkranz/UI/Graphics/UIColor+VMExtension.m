@@ -1,5 +1,6 @@
 #import "UIColor+VMExtension.h"
 #import "UIImage+VMExtension.h"
+#import "VMSingletone.h"
 
 @implementation UIColor (VMExtension)
 
@@ -50,7 +51,7 @@
 }
 
 + (UIColor *)hollowBackgroundColor {
-    return [UIColor colorWithPatternImage:[UIImage hollowPattern]];
+    VMStoreAndReturn( [UIColor colorWithPatternImage:[UIImage hollowPattern]] )
 }
 
 - (NSString *)hexValue {
