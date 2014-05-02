@@ -3,7 +3,7 @@
 
 const NSInteger NSDictionaryObjectCannotBeCopiedErrorCode = 100;
 const NSInteger NSDictionaryObjectCannotBeMergedErrorCode = 101;
-NSString * const NSDictionaryVMExtensionDomain = @"ru.visulamyth.blumenkranz.NSDictionary_VMExtension";
+NSString * const NSDictionaryVMExtensionDomain = @"ru.visualmyth.blumenkranz.NSDictionary_VMExtension";
 
 @implementation NSDictionary (VMExtension)
 

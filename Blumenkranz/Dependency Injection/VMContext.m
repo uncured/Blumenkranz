@@ -1,6 +1,6 @@
 #import "VMContext.h"
 #import "VMContextProviding.h"
-#import "VMValidation.h"
+#import "VMClassCheckUtils.h"
 #import "VMContextBindingManager.h"
 #import "VMSingletone.h"
 #import "VMInjection.h"

@@ -1,7 +1,7 @@
 #import "NSArray+VMExtension.h"
 
 const NSInteger NSArrayObjectCannotBeCopiedErrorCode = 100;
-NSString * const NSArrayVMExtensionDomain = @"ru.visulamyth.blumenkranz.NSArray_VMExtension";
+NSString * const NSArrayVMExtensionDomain = @"ru.visualmyth.blumenkranz.NSArray_VMExtension";
 
 @implementation NSArray (VMExtension)
 
