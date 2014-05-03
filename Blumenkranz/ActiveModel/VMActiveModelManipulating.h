@@ -8,6 +8,4 @@
 
 - (void)read:(NSDictionary *)parameters callback:(VMErrorsBlock)errorCallback;
 
-- (BOOL)validate:(VMErrorsBlock)errorCallback;
-
 @end

@@ -56,6 +56,9 @@
 		6E9B1A4318CDE3EE0024FF97 /* VMSequenceView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E9B1A4118CDE3EE0024FF97 /* VMSequenceView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E9B1A4418CDE3EE0024FF97 /* VMSequenceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B1A4218CDE3EE0024FF97 /* VMSequenceView.m */; };
 		6E9B1A4618CDE5810024FF97 /* VMPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E9B1A4518CDE5810024FF97 /* VMPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6EA2F4A819155EF200D4DCFC /* VMValidatableModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EA2F4A619155EF200D4DCFC /* VMValidatableModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6EA2F4A919155EF200D4DCFC /* VMValidatableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA2F4A719155EF200D4DCFC /* VMValidatableModel.m */; };
+		6EA2F4AB19155F1100D4DCFC /* VMModelValidating.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EA2F4AA19155F1100D4DCFC /* VMModelValidating.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6EA70D8119083D9B0088AFB9 /* InjectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA70D8019083D9B0088AFB9 /* InjectionTests.m */; };
 		6EA8DAED18C8FB1D00F04908 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA8DAEC18C8FB1D00F04908 /* UIKit.framework */; };
 		6EA8DAEE18C8FB2D00F04908 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA8DAEC18C8FB1D00F04908 /* UIKit.framework */; };
@@ -151,6 +154,9 @@
 		6E9B1A4118CDE3EE0024FF97 /* VMSequenceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMSequenceView.h; sourceTree = "<group>"; };
 		6E9B1A4218CDE3EE0024FF97 /* VMSequenceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMSequenceView.m; sourceTree = "<group>"; };
 		6E9B1A4518CDE5810024FF97 /* VMPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMPlatform.h; sourceTree = "<group>"; };
+		6EA2F4A619155EF200D4DCFC /* VMValidatableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMValidatableModel.h; sourceTree = "<group>"; };
+		6EA2F4A719155EF200D4DCFC /* VMValidatableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMValidatableModel.m; sourceTree = "<group>"; };
+		6EA2F4AA19155F1100D4DCFC /* VMModelValidating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMModelValidating.h; sourceTree = "<group>"; };
 		6EA70D8019083D9B0088AFB9 /* InjectionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InjectionTests.m; sourceTree = "<group>"; };
 		6EA8DAEC18C8FB1D00F04908 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6EA8DAFE18C8FEB400F04908 /* Blumenkranz.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Blumenkranz.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -442,7 +448,10 @@
 			children = (
 				6ED45C4119140CE50022AAF9 /* VMActiveModel.h */,
 				6ED45C4219140CE50022AAF9 /* VMActiveModel.m */,
+				6EA2F4A619155EF200D4DCFC /* VMValidatableModel.h */,
+				6EA2F4A719155EF200D4DCFC /* VMValidatableModel.m */,
 				6ED45C4519140D220022AAF9 /* VMActiveModelManipulating.h */,
+				6EA2F4AA19155F1100D4DCFC /* VMModelValidating.h */,
 				6ED45C4719140F570022AAF9 /* VMActiveModelValidation.h */,
 			);
 			path = ActiveModel;
@@ -498,11 +507,13 @@
 				6E9B1A4618CDE5810024FF97 /* VMPlatform.h in Headers */,
 				6E7DBA1518CB8D0A004B876C /* VMRandom.h in Headers */,
 				6ED483231904445E00C82AA1 /* VMLog.h in Headers */,
+				6EA2F4AB19155F1100D4DCFC /* VMModelValidating.h in Headers */,
 				6EA8DB1418C9019300F04908 /* VMBlumenkranz.h in Headers */,
 				6E7DBA0D18CB8AD9004B876C /* VMAssertion.h in Headers */,
 				6E1C97D118F4732D008059A8 /* VMViewController.h in Headers */,
 				6E1C97DD18F47C7A008059A8 /* VMClassCheckUtils.h in Headers */,
 				6ED4831B19043C2E00C82AA1 /* VMContextBindingManager.h in Headers */,
+				6EA2F4A819155EF200D4DCFC /* VMValidatableModel.h in Headers */,
 				6E7DBA0018CB89E6004B876C /* NSArray+VMExtension.h in Headers */,
 				6E839A3C18CB893700664C67 /* NSDictionary+VMExtension.h in Headers */,
 				6ED45C4819140F570022AAF9 /* VMActiveModelValidation.h in Headers */,
@@ -665,6 +676,7 @@
 				6E7DBA1F18CB9739004B876C /* NSString+VMExtension.m in Sources */,
 				6E7DBA0A18CB8A8B004B876C /* UIImage+VMExtension.m in Sources */,
 				6ED45C4419140CE50022AAF9 /* VMActiveModel.m in Sources */,
+				6EA2F4A919155EF200D4DCFC /* VMValidatableModel.m in Sources */,
 				6EFA223218CBAA6200F7EA40 /* VMGameCenterService.m in Sources */,
 				6E7DBA1618CB8D0A004B876C /* VMRandom.m in Sources */,
 				6E1C97D218F4732D008059A8 /* VMViewController.m in Sources */,
