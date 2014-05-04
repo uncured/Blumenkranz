@@ -1,4 +1,5 @@
 #import "VMModelValidating.h"
+#import "CTBlockDescription.h"
 #import "VMActiveModelValidation.h"
 
 typedef NS_ENUM(uint8_t, VMValidationErrorCode) {
@@ -14,9 +15,7 @@ typedef NS_ENUM(uint8_t, VMValidationErrorCode) {
     VMValidationErrorCodeNull,
     VMValidationErrorCodeInRange,
     VMValidationErrorCodeLess,
-    VMValidationErrorCodeLessOrEqual,
     VMValidationErrorCodeGreater,
-    VMValidationErrorCodeGreaterOrEqual,
     VMValidationErrorCodeOdd,
     VMValidationErrorCodeEven,
     VMValidationErrorCodeBlock,

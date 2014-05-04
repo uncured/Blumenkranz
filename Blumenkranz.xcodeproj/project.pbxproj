@@ -23,6 +23,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		6E0C422A19168019003E703B /* CTBlockDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E0C422819168019003E703B /* CTBlockDescription.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E0C422B19168019003E703B /* CTBlockDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0C422919168019003E703B /* CTBlockDescription.m */; };
 		6E0D7DBB18CCFF4200E99516 /* NSMutableDictionary+VMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E0D7DB918CCFF4200E99516 /* NSMutableDictionary+VMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E0D7DBC18CCFF4200E99516 /* NSMutableDictionary+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D7DBA18CCFF4200E99516 /* NSMutableDictionary+VMExtension.m */; };
 		6E0D7DBF18CD088100E99516 /* NSMutableArray+VMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E0D7DBD18CD088100E99516 /* NSMutableArray+VMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -115,6 +117,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E0C422819168019003E703B /* CTBlockDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBlockDescription.h; sourceTree = "<group>"; };
+		6E0C422919168019003E703B /* CTBlockDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBlockDescription.m; sourceTree = "<group>"; };
 		6E0D7DB918CCFF4200E99516 /* NSMutableDictionary+VMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+VMExtension.h"; sourceTree = "<group>"; };
 		6E0D7DBA18CCFF4200E99516 /* NSMutableDictionary+VMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+VMExtension.m"; sourceTree = "<group>"; };
 		6E0D7DBD18CD088100E99516 /* NSMutableArray+VMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+VMExtension.h"; sourceTree = "<group>"; };
@@ -213,6 +217,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E0C422719168003003E703B /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				6E0C422819168019003E703B /* CTBlockDescription.h */,
+				6E0C422919168019003E703B /* CTBlockDescription.m */,
+			);
+			path = Runtime;
+			sourceTree = "<group>";
+		};
 		6E1C97CD18F47232008059A8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +336,7 @@
 		6E37F14D18C8F836000BD94B /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				6E0C422719168003003E703B /* Runtime */,
 				6ED483201904442D00C82AA1 /* Logging */,
 				6E1C97DA18F47C3E008059A8 /* Validation */,
 				6E7DBA1B18CB9728004B876C /* Text */,
@@ -513,6 +527,7 @@
 				6E1C97D118F4732D008059A8 /* VMViewController.h in Headers */,
 				6E1C97DD18F47C7A008059A8 /* VMClassCheckUtils.h in Headers */,
 				6ED4831B19043C2E00C82AA1 /* VMContextBindingManager.h in Headers */,
+				6E0C422A19168019003E703B /* CTBlockDescription.h in Headers */,
 				6EA2F4A819155EF200D4DCFC /* VMValidatableModel.h in Headers */,
 				6E7DBA0018CB89E6004B876C /* NSArray+VMExtension.h in Headers */,
 				6E839A3C18CB893700664C67 /* NSDictionary+VMExtension.h in Headers */,
@@ -588,7 +603,7 @@
 				ORGANIZATIONNAME = VisualMyth;
 				TargetAttributes = {
 					6E37F13218C8F734000BD94B = {
-						TestTargetID = 6E37F12218C8F734000BD94B;
+						TestTargetID = 6E37F12218C8F734000BD94B /* Blumenkranz */;
 					};
 				};
 			};
@@ -681,6 +696,7 @@
 				6E7DBA1618CB8D0A004B876C /* VMRandom.m in Sources */,
 				6E1C97D218F4732D008059A8 /* VMViewController.m in Sources */,
 				6E1C97D718F477CA008059A8 /* VMContext.m in Sources */,
+				6E0C422B19168019003E703B /* CTBlockDescription.m in Sources */,
 				6E839A3D18CB893700664C67 /* NSDictionary+VMExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
