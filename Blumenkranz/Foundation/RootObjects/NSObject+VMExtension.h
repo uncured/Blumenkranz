@@ -5,4 +5,8 @@
 
 + (Class)classOfProperty:(NSString *)propertyName;
 
++ (id)methodDescriptionForClass:(Class)class;
+
++ (id)ivarDescriptionForClass:(Class)class;
+
 @end

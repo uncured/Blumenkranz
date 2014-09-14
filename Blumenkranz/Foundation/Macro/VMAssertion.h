@@ -45,74 +45,68 @@
  * Check for NSString type of given argument
  */
 #define VMString(object) \
-    if (![object isKindOfClass:[NSString class]]) { \
-        NSAssert(NO, @"[%@] is not a string in method %@.", object, NSStringFromSelector(_cmd)); \
-    }
+    NSAssert([object isKindOfClass:[NSString class]], @"[%@] is not a string in method %@.", object, NSStringFromSelector(_cmd)); \
+
+/*
+ * Check for NSNumber type of given argument
+ */
+#define VMNumber(object) \
+    NSAssert([object isKindOfClass:[NSNumber class]], @"[%@] is not a number in method %@.", object, NSStringFromSelector(_cmd)); \
 
 /*
  * Check for NSArray type of given argument
  */
 #define VMArray(object) \
-    if (![object isKindOfClass:[NSArray class]]) { \
-        NSAssert(NO, @"[%@] is not an array in method %@.", object, NSStringFromSelector(_cmd)); \
-    }
+    NSAssert([object isKindOfClass:[NSArray class]], @"[%@] is not an array in method %@.", object, NSStringFromSelector(_cmd)); \
 
 /*
  * Check for NSDictionary type of given argument
  */
 #define VMDictionary(object) \
-    if (![object isKindOfClass:[NSDictionary class]]) { \
-        NSAssert(NO, @"[%@] is not a dictionary in method %@.", object, NSStringFromSelector(_cmd)); \
-    }
+    NSAssert([object isKindOfClass:[NSDictionary class]], @"[%@] is not a dictionary in method %@.", object, NSStringFromSelector(_cmd)); \
+
+/*
+ * Check for existing of property
+ */
+#define VMProperty(object) \
+    NSAssert([self respondsToSelector:NSSelectorFromString(object)], @"[%@] is not a property in method %@.", object, NSStringFromSelector(_cmd)); \
 
 /*
  * Check given argument for certain class
  */
-#define VMCheckClass(object, class) \
-    if (!(class && [object isKindOfClass:class])) { \
-        NSAssert(NO, @"[%@] is not an instance of class [%@] in method %@.", object, class, NSStringFromSelector(_cmd)); \
-    }
+#define VMCheckClass(object, objectClass) \
+    NSAssert((objectClass && [object isKindOfClass:objectClass]), @"[%@] is not an instance of class [%@] in method %@.", object, objectClass, NSStringFromSelector(_cmd)); \
 
 /*
  * Check for existing of object
  */
 #define VMExist(object) \
-    if (!object) { \
-        NSAssert(NO, @"Object doesn't exist in method %@.", NSStringFromSelector(_cmd)); \
-    }
+    NSAssert(object, @"Object doesn't exist in method %@.", NSStringFromSelector(_cmd)); \
 
 /*
  * Check for non-existing of object
  */
 #define VMNotExist(object) \
-    if (object) { \
-        NSAssert(NO, @"Object exists in method %@.", NSStringFromSelector(_cmd)); \
-    }
+    NSAssert(!object, @"Object exists in method %@.", NSStringFromSelector(_cmd)); \
 
 /*
  * Check array to contain only given type of objects
  */
 #define VMArrayOfGenericType(array, objectClass) \
     for (id arrayObject in array) { \
-        if (![arrayObject isKindOfClass:objectClass]) { \
-            NSAssert(NO, @"Object [%@] is not of type %@ in method %@.", arrayObject, objectClass, NSStringFromSelector(_cmd)); \
-        } \
+        NSAssert([arrayObject isKindOfClass:objectClass], @"Object [%@] is not of type %@ in method %@.", arrayObject, objectClass, NSStringFromSelector(_cmd)); \
     }
 
 /*
  * Check objects to be equal
  */
 #define VMEqual(leftObject, rightObject) \
-    if (![leftObject isEqual:rightObject]) { \
-        NSAssert(NO, @"Object [%@] is not equal to [%@] in method %@.", leftObject, rightObject, NSStringFromSelector(_cmd)); \
-    } \
+    NSAssert([leftObject isEqual:rightObject], @"Object [%@] is not equal to [%@] in method %@.", leftObject, rightObject, NSStringFromSelector(_cmd)); \
 
 /*
  * Check objects not to be equal
  */
 #define VMNotEqual(leftObject, rightObject) \
-    if ([leftObject isEqual:rightObject]) { \
-        NSAssert(NO, @"Object [%@] is equal to [%@] in method %@.", leftObject, rightObject, NSStringFromSelector(_cmd)); \
-    } \
+    NSAssert(![leftObject isEqual:rightObject], @"Object [%@] is equal to [%@] in method %@.", leftObject, rightObject, NSStringFromSelector(_cmd)); \
 
 #endif

@@ -40,6 +40,9 @@
 		6E37F13618C8F734000BD94B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E37F12618C8F734000BD94B /* Foundation.framework */; };
 		6E37F13B18C8F734000BD94B /* libBlumenkranz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E37F12318C8F734000BD94B /* libBlumenkranz.a */; };
 		6E37F14318C8F734000BD94B /* BlumenkranzTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E37F14218C8F734000BD94B /* BlumenkranzTests.m */; };
+		6E47163319C614E1004F1BD3 /* VMCircularLoaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E47163119C614E1004F1BD3 /* VMCircularLoaderView.h */; };
+		6E47163419C614E1004F1BD3 /* VMCircularLoaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E47163219C614E1004F1BD3 /* VMCircularLoaderView.m */; };
+		6E47163519C614E1004F1BD3 /* VMCircularLoaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E47163219C614E1004F1BD3 /* VMCircularLoaderView.m */; };
 		6E7DBA0018CB89E6004B876C /* NSArray+VMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E7DB9FE18CB89E6004B876C /* NSArray+VMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E7DBA0118CB89E6004B876C /* NSArray+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7DB9FF18CB89E6004B876C /* NSArray+VMExtension.m */; };
 		6E7DBA0518CB8A31004B876C /* UIColor+VMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E7DBA0318CB8A31004B876C /* UIColor+VMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -140,6 +143,8 @@
 		6E37F13418C8F734000BD94B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6E37F13E18C8F734000BD94B /* BlumenkranzTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BlumenkranzTests-Info.plist"; sourceTree = "<group>"; };
 		6E37F14218C8F734000BD94B /* BlumenkranzTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlumenkranzTests.m; sourceTree = "<group>"; };
+		6E47163119C614E1004F1BD3 /* VMCircularLoaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMCircularLoaderView.h; sourceTree = "<group>"; };
+		6E47163219C614E1004F1BD3 /* VMCircularLoaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMCircularLoaderView.m; sourceTree = "<group>"; };
 		6E7DB9FE18CB89E6004B876C /* NSArray+VMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+VMExtension.h"; sourceTree = "<group>"; };
 		6E7DB9FF18CB89E6004B876C /* NSArray+VMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+VMExtension.m"; sourceTree = "<group>"; };
 		6E7DBA0318CB8A31004B876C /* UIColor+VMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+VMExtension.h"; sourceTree = "<group>"; };
@@ -359,6 +364,15 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		6E47163019C614E1004F1BD3 /* VMCircularLoaderView */ = {
+			isa = PBXGroup;
+			children = (
+				6E47163119C614E1004F1BD3 /* VMCircularLoaderView.h */,
+				6E47163219C614E1004F1BD3 /* VMCircularLoaderView.m */,
+			);
+			path = VMCircularLoaderView;
+			sourceTree = "<group>";
+		};
 		6E7DBA0218CB8A1F004B876C /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
@@ -417,6 +431,7 @@
 		6E9B1A3F18CDE3DE0024FF97 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				6E47163019C614E1004F1BD3 /* VMCircularLoaderView */,
 				6E9B1A4018CDE3DE0024FF97 /* VMSequenceView */,
 			);
 			path = Controls;
@@ -508,6 +523,7 @@
 				6E9B1A4318CDE3EE0024FF97 /* VMSequenceView.h in Headers */,
 				6E7DBA1E18CB9739004B876C /* NSString+VMExtension.h in Headers */,
 				6ED45C4319140CE50022AAF9 /* VMActiveModel.h in Headers */,
+				6E47163319C614E1004F1BD3 /* VMCircularLoaderView.h in Headers */,
 				6ED4831F19043FAB00C82AA1 /* VMKeyProviding.h in Headers */,
 				6ED45C4619140D260022AAF9 /* VMActiveModelManipulating.h in Headers */,
 				6E0D7DBF18CD088100E99516 /* NSMutableArray+VMExtension.h in Headers */,
@@ -603,7 +619,7 @@
 				ORGANIZATIONNAME = VisualMyth;
 				TargetAttributes = {
 					6E37F13218C8F734000BD94B = {
-						TestTargetID = 6E37F12218C8F734000BD94B /* Blumenkranz */;
+						TestTargetID = 6E37F12218C8F734000BD94B;
 					};
 				};
 			};
@@ -698,6 +714,7 @@
 				6E1C97D718F477CA008059A8 /* VMContext.m in Sources */,
 				6E0C422B19168019003E703B /* CTBlockDescription.m in Sources */,
 				6E839A3D18CB893700664C67 /* NSDictionary+VMExtension.m in Sources */,
+				6E47163419C614E1004F1BD3 /* VMCircularLoaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,6 +725,7 @@
 				6ED45C4A191421130022AAF9 /* ActiveModelTests.m in Sources */,
 				6E37F14318C8F734000BD94B /* BlumenkranzTests.m in Sources */,
 				6EA70D8119083D9B0088AFB9 /* InjectionTests.m in Sources */,
+				6E47163519C614E1004F1BD3 /* VMCircularLoaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -777,7 +795,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)/Headers";
 				SDKROOT = iphoneos;
 				STRIP_INSTALLED_PRODUCT = YES;

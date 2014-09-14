@@ -37,4 +37,33 @@
     return propertyClass;
 }
 
+#pragma mark Debug introspection
++ (id)methodDescriptionForClass:(Class)class {
+    SEL selector = (class ? NSSelectorFromString(@"__methodDescriptionForClass:") : NSSelectorFromString(@"_methodDescription"));
+    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[NSObject instanceMethodSignatureForSelector:selector]];
+    [invocation setTarget:self];
+    [invocation setSelector:selector];
+    if (class) {
+        [invocation setArgument:&class atIndex:2];
+    }
+    [invocation invoke];
+    NSString *result = nil;
+    [invocation getReturnValue:&result];
+    return result;
+}
+
++ (id)ivarDescriptionForClass:(Class)class {
+    SEL selector = (class ? NSSelectorFromString(@"__ivarDescriptionForClass:") : NSSelectorFromString(@"_ivarDescription"));
+    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[NSObject instanceMethodSignatureForSelector:selector]];
+    [invocation setTarget:self];
+    [invocation setSelector:selector];
+    if (class) {
+        [invocation setArgument:&class atIndex:2];
+    }
+    [invocation invoke];
+    NSString *result = nil;
+    [invocation getReturnValue:&result];
+    return result;
+}
+
 @end
