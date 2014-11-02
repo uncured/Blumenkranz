@@ -21,9 +21,9 @@ NSString * const NSDictionaryVMExtensionDomain = @"ru.visualmyth.blumenkranz.NSD
         NSSet *keysForMerge = [[dictionary allKeys] exclusion:[self allKeys]];
 
         for (id keyForMerge in [keysForMerge allObjects]) {
-            id object = [dictionary objectForKey:keyForMerge];
+            id object = dictionary[keyForMerge];
             if (needToCopyObjects) {
-                if ([object respondsToSelector:@selector(copy)]) {
+                if ([object respondsToSelector:@selector(copy)] && [object respondsToSelector:@selector(copyWithZone:)]) {
                     object = [object copy];
                 } else {
                     if (error) {
@@ -32,24 +32,28 @@ NSString * const NSDictionaryVMExtensionDomain = @"ru.visualmyth.blumenkranz.NSD
                     return nil;
                 }
             }
-            [resultDictionary setObject:object forKey:keyForMerge];
+            resultDictionary[keyForMerge] = object;
         }
     }
 
     BOOL needToReplaceExistingKeys = (type & VMDictionaryMergeExistingKeysReplace);
+    BOOL needToJoinExistingKeys = (type & VMDictionaryMergeExistingKeysJoin);
     BOOL needToProcessIntersectionKeys = (type & (VMDictionaryMergeExistingKeysJoin | VMDictionaryMergeExistingKeysReplace));
 
     if (needToProcessIntersectionKeys) {
         NSSet *keysForMerge = [[dictionary allKeys] intersection:[self allKeys]];
 
         for (id keyForMerge in [keysForMerge allObjects]) {
-            id mergeObject = [dictionary objectForKey:keyForMerge];
-            id existingObject = [self objectForKey:keyForMerge];
+            id mergeObject = dictionary[keyForMerge];
+            id existingObject = self[keyForMerge];
 
-            if (needToReplaceExistingKeys) {
+            BOOL isMergingDictionaries = [mergeObject isKindOfClass:[NSDictionary class]] && [existingObject isKindOfClass:[NSDictionary class]];
+            BOOL isMergingArrays = [mergeObject isKindOfClass:[NSArray class]] && [existingObject isKindOfClass:[NSArray class]];
+
+            if (needToReplaceExistingKeys && !(needToJoinExistingKeys && (isMergingDictionaries || isMergingArrays))) {
 
                 if (needToCopyObjects) {
-                    if ([mergeObject respondsToSelector:@selector(copy)]) {
+                    if ([mergeObject respondsToSelector:@selector(copy)] && [mergeObject respondsToSelector:@selector(copyWithZone:)]) {
                         mergeObject = [mergeObject copy];
                     } else {
                         if (error) {
@@ -58,29 +62,26 @@ NSString * const NSDictionaryVMExtensionDomain = @"ru.visualmyth.blumenkranz.NSD
                         return nil;
                     }
                 }
-                [resultDictionary setObject:mergeObject forKey:keyForMerge];
+                resultDictionary[keyForMerge] = mergeObject;
 
-            } else {
+            } else if (isMergingDictionaries) {
 
-                if ([mergeObject isKindOfClass:[NSDictionary class]] && [existingObject isKindOfClass:[NSDictionary class]]) {
-
-                    NSDictionary *deepMergeResult = [(NSDictionary *)existingObject dictionaryByMerge:mergeObject type:type error:error];
-                    if (deepMergeResult) {
-                        [resultDictionary setObject:deepMergeResult forKey:keyForMerge];
-                    } else {
-                        return nil;
+                NSDictionary *deepMergeResult = [(NSDictionary *)existingObject dictionaryByMerge:mergeObject type:type error:error];
+                if (deepMergeResult) {
+                    resultDictionary[keyForMerge] = deepMergeResult;
+                } else {
+                    if (error) {
+                        *error = [NSDictionary vm_objectDeepMergeError:existingObject with:mergeObject];
                     }
+                    return nil;
+                }
 
-                } else if ([mergeObject isKindOfClass:[NSArray class]] && [existingObject isKindOfClass:[NSArray class]]) {
+            } else if (isMergingArrays) {
 
-                    VMArrayMergeType deepMergeType = (needToCopyObjects ? VMArrayMergeCopy : VMArrayMergeNone);
-                    NSArray *deepMergeResult = [(NSArray *)existingObject arrayByMerge:mergeObject type:deepMergeType error:error];
-                    if (deepMergeResult) {
-                        [resultDictionary setObject:deepMergeResult forKey:keyForMerge];
-                    } else {
-                        return nil;
-                    }
-
+                VMArrayMergeType deepMergeType = (needToCopyObjects ? VMArrayMergeCopy : VMArrayMergeNone);
+                NSArray *deepMergeResult = [(NSArray *)existingObject arrayByMerge:mergeObject type:deepMergeType error:error];
+                if (deepMergeResult) {
+                    resultDictionary[keyForMerge] = deepMergeResult;
                 } else {
                     if (error) {
                         *error = [NSDictionary vm_objectDeepMergeError:existingObject with:mergeObject];

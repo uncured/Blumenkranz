@@ -17,7 +17,7 @@ NSString * const NSArrayVMExtensionDomain = @"ru.visualmyth.blumenkranz.NSArray_
     for (id object in [exclusion allObjects]) {
         id objectToMerge = object;
         if (needToCopyObjects) {
-            if ([objectToMerge respondsToSelector:@selector(copy)]) {
+            if ([objectToMerge respondsToSelector:@selector(copy)] && [objectToMerge respondsToSelector:@selector(copyWithZone:)]) {
                 objectToMerge = [objectToMerge copy];
             } else {
                 if (error) {

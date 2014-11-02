@@ -23,8 +23,6 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		6E0C422A19168019003E703B /* CTBlockDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E0C422819168019003E703B /* CTBlockDescription.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6E0C422B19168019003E703B /* CTBlockDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0C422919168019003E703B /* CTBlockDescription.m */; };
 		6E0D7DBB18CCFF4200E99516 /* NSMutableDictionary+VMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E0D7DB918CCFF4200E99516 /* NSMutableDictionary+VMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E0D7DBC18CCFF4200E99516 /* NSMutableDictionary+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D7DBA18CCFF4200E99516 /* NSMutableDictionary+VMExtension.m */; };
 		6E0D7DBF18CD088100E99516 /* NSMutableArray+VMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E0D7DBD18CD088100E99516 /* NSMutableArray+VMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -70,6 +68,16 @@
 		6EA8DAF018C8FB8B00F04908 /* Blumenkranz.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E37F12B18C8F734000BD94B /* Blumenkranz.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6EA8DB1418C9019300F04908 /* VMBlumenkranz.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EA8DB1218C9019300F04908 /* VMBlumenkranz.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6EA8DB1518C9019300F04908 /* VMBlumenkranz.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA8DB1318C9019300F04908 /* VMBlumenkranz.m */; };
+		6EB7FCA61A06D36600986315 /* ArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB7FCA51A06D36600986315 /* ArrayTests.m */; };
+		6EB7FCA81A06D40C00986315 /* DictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB7FCA71A06D40C00986315 /* DictionaryTests.m */; };
+		6EB7FCAA1A06D42800986315 /* ObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB7FCA91A06D42800986315 /* ObjectTests.m */; };
+		6EB7FCAE1A06D54500986315 /* CTBlockDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EB7FCAC1A06D54500986315 /* CTBlockDescription.h */; };
+		6EB7FCAF1A06D54500986315 /* CTBlockDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB7FCAD1A06D54500986315 /* CTBlockDescription.m */; };
+		6EB7FCB11A06DBE600986315 /* NSObject+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7DBA1018CB8C77004B876C /* NSObject+VMExtension.m */; };
+		6EB7FCB21A06E39B00986315 /* NSDictionary+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E839A3B18CB893700664C67 /* NSDictionary+VMExtension.m */; };
+		6EB7FCB31A06E39B00986315 /* NSMutableDictionary+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D7DBA18CCFF4200E99516 /* NSMutableDictionary+VMExtension.m */; };
+		6EB7FCB41A06E39B00986315 /* NSArray+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7DB9FF18CB89E6004B876C /* NSArray+VMExtension.m */; };
+		6EB7FCB51A06E39B00986315 /* NSMutableArray+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D7DBE18CD088100E99516 /* NSMutableArray+VMExtension.m */; };
 		6ED45C4319140CE50022AAF9 /* VMActiveModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ED45C4119140CE50022AAF9 /* VMActiveModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6ED45C4419140CE50022AAF9 /* VMActiveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED45C4219140CE50022AAF9 /* VMActiveModel.m */; };
 		6ED45C4619140D260022AAF9 /* VMActiveModelManipulating.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ED45C4519140D220022AAF9 /* VMActiveModelManipulating.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -120,8 +128,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6E0C422819168019003E703B /* CTBlockDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBlockDescription.h; sourceTree = "<group>"; };
-		6E0C422919168019003E703B /* CTBlockDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBlockDescription.m; sourceTree = "<group>"; };
 		6E0D7DB918CCFF4200E99516 /* NSMutableDictionary+VMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+VMExtension.h"; sourceTree = "<group>"; };
 		6E0D7DBA18CCFF4200E99516 /* NSMutableDictionary+VMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+VMExtension.m"; sourceTree = "<group>"; };
 		6E0D7DBD18CD088100E99516 /* NSMutableArray+VMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+VMExtension.h"; sourceTree = "<group>"; };
@@ -173,6 +179,11 @@
 		6EA8DB0718C8FEB400F04908 /* BlumenkranzResources-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BlumenkranzResources-Prefix.pch"; sourceTree = "<group>"; };
 		6EA8DB1218C9019300F04908 /* VMBlumenkranz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMBlumenkranz.h; sourceTree = "<group>"; };
 		6EA8DB1318C9019300F04908 /* VMBlumenkranz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMBlumenkranz.m; sourceTree = "<group>"; };
+		6EB7FCA51A06D36600986315 /* ArrayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayTests.m; sourceTree = "<group>"; };
+		6EB7FCA71A06D40C00986315 /* DictionaryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryTests.m; sourceTree = "<group>"; };
+		6EB7FCA91A06D42800986315 /* ObjectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectTests.m; sourceTree = "<group>"; };
+		6EB7FCAC1A06D54500986315 /* CTBlockDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBlockDescription.h; sourceTree = "<group>"; };
+		6EB7FCAD1A06D54500986315 /* CTBlockDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBlockDescription.m; sourceTree = "<group>"; };
 		6ED45C4119140CE50022AAF9 /* VMActiveModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMActiveModel.h; sourceTree = "<group>"; };
 		6ED45C4219140CE50022AAF9 /* VMActiveModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMActiveModel.m; sourceTree = "<group>"; };
 		6ED45C4519140D220022AAF9 /* VMActiveModelManipulating.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMActiveModelManipulating.h; sourceTree = "<group>"; };
@@ -222,15 +233,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6E0C422719168003003E703B /* Runtime */ = {
-			isa = PBXGroup;
-			children = (
-				6E0C422819168019003E703B /* CTBlockDescription.h */,
-				6E0C422919168019003E703B /* CTBlockDescription.m */,
-			);
-			path = Runtime;
-			sourceTree = "<group>";
-		};
 		6E1C97CD18F47232008059A8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,6 +324,9 @@
 		6E37F13C18C8F734000BD94B /* BlumenkranzTests */ = {
 			isa = PBXGroup;
 			children = (
+				6EB7FCA91A06D42800986315 /* ObjectTests.m */,
+				6EB7FCA51A06D36600986315 /* ArrayTests.m */,
+				6EB7FCA71A06D40C00986315 /* DictionaryTests.m */,
 				6EA70D8019083D9B0088AFB9 /* InjectionTests.m */,
 				6ED45C49191421130022AAF9 /* ActiveModelTests.m */,
 				6E37F14218C8F734000BD94B /* BlumenkranzTests.m */,
@@ -341,7 +346,7 @@
 		6E37F14D18C8F836000BD94B /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				6E0C422719168003003E703B /* Runtime */,
+				6EB7FCAB1A06D54500986315 /* Runtime */,
 				6ED483201904442D00C82AA1 /* Logging */,
 				6E1C97DA18F47C3E008059A8 /* Validation */,
 				6E7DBA1B18CB9728004B876C /* Text */,
@@ -472,6 +477,15 @@
 			path = Framework;
 			sourceTree = "<group>";
 		};
+		6EB7FCAB1A06D54500986315 /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				6EB7FCAC1A06D54500986315 /* CTBlockDescription.h */,
+				6EB7FCAD1A06D54500986315 /* CTBlockDescription.m */,
+			);
+			path = Runtime;
+			sourceTree = "<group>";
+		};
 		6ED45C4019140CB20022AAF9 /* ActiveModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -543,12 +557,12 @@
 				6E1C97D118F4732D008059A8 /* VMViewController.h in Headers */,
 				6E1C97DD18F47C7A008059A8 /* VMClassCheckUtils.h in Headers */,
 				6ED4831B19043C2E00C82AA1 /* VMContextBindingManager.h in Headers */,
-				6E0C422A19168019003E703B /* CTBlockDescription.h in Headers */,
 				6EA2F4A819155EF200D4DCFC /* VMValidatableModel.h in Headers */,
 				6E7DBA0018CB89E6004B876C /* NSArray+VMExtension.h in Headers */,
 				6E839A3C18CB893700664C67 /* NSDictionary+VMExtension.h in Headers */,
 				6ED45C4819140F570022AAF9 /* VMActiveModelValidation.h in Headers */,
 				6E7DBA1118CB8C77004B876C /* NSObject+VMExtension.h in Headers */,
+				6EB7FCAE1A06D54500986315 /* CTBlockDescription.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -704,6 +718,7 @@
 				6E1C97DE18F47C7A008059A8 /* VMClassCheckUtils.m in Sources */,
 				6E0D7DBC18CCFF4200E99516 /* NSMutableDictionary+VMExtension.m in Sources */,
 				6E9B1A4418CDE3EE0024FF97 /* VMSequenceView.m in Sources */,
+				6EB7FCAF1A06D54500986315 /* CTBlockDescription.m in Sources */,
 				6E7DBA1F18CB9739004B876C /* NSString+VMExtension.m in Sources */,
 				6E7DBA0A18CB8A8B004B876C /* UIImage+VMExtension.m in Sources */,
 				6ED45C4419140CE50022AAF9 /* VMActiveModel.m in Sources */,
@@ -712,7 +727,6 @@
 				6E7DBA1618CB8D0A004B876C /* VMRandom.m in Sources */,
 				6E1C97D218F4732D008059A8 /* VMViewController.m in Sources */,
 				6E1C97D718F477CA008059A8 /* VMContext.m in Sources */,
-				6E0C422B19168019003E703B /* CTBlockDescription.m in Sources */,
 				6E839A3D18CB893700664C67 /* NSDictionary+VMExtension.m in Sources */,
 				6E47163419C614E1004F1BD3 /* VMCircularLoaderView.m in Sources */,
 			);
@@ -722,9 +736,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EB7FCB21A06E39B00986315 /* NSDictionary+VMExtension.m in Sources */,
 				6ED45C4A191421130022AAF9 /* ActiveModelTests.m in Sources */,
 				6E37F14318C8F734000BD94B /* BlumenkranzTests.m in Sources */,
 				6EA70D8119083D9B0088AFB9 /* InjectionTests.m in Sources */,
+				6EB7FCB51A06E39B00986315 /* NSMutableArray+VMExtension.m in Sources */,
+				6EB7FCB31A06E39B00986315 /* NSMutableDictionary+VMExtension.m in Sources */,
+				6EB7FCA81A06D40C00986315 /* DictionaryTests.m in Sources */,
+				6EB7FCB11A06DBE600986315 /* NSObject+VMExtension.m in Sources */,
+				6EB7FCA61A06D36600986315 /* ArrayTests.m in Sources */,
+				6EB7FCB41A06E39B00986315 /* NSArray+VMExtension.m in Sources */,
+				6EB7FCAA1A06D42800986315 /* ObjectTests.m in Sources */,
 				6E47163519C614E1004F1BD3 /* VMCircularLoaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

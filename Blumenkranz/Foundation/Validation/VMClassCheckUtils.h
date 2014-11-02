@@ -1,4 +1,3 @@
-
 BOOL vmIsClass(id validationObject);
 
 BOOL vmIsClassName(NSString *validationObject);

@@ -26,44 +26,24 @@
 + (Class)classOfProperty:(NSString *)propertyName {
     Class propertyClass = nil;
     objc_property_t property = class_getProperty(self, [propertyName UTF8String]);
+    if (property == NULL) {
+        return nil;
+    }
     NSString *propertyAttributes = [NSString stringWithCString:property_getAttributes(property) encoding:NSUTF8StringEncoding];
     NSArray *splitPropertyAttributes = [propertyAttributes componentsSeparatedByString:@","];
     if ([splitPropertyAttributes count] > 0){
         NSString *encodeType = splitPropertyAttributes[0];
         NSArray *splitEncodeType = [encodeType componentsSeparatedByString:@"\""];
-        NSString *className = splitEncodeType[1];
-        propertyClass = NSClassFromString(className);
+        if ([splitEncodeType count] > 1) {
+            NSString *className = splitEncodeType[1];
+            if (![className hasPrefix:@"<"]) {
+                propertyClass = NSClassFromString(className);
+            }
+        } else if ([splitEncodeType count] && [splitEncodeType[0] hasSuffix:@"?"]) {
+            propertyClass = NSClassFromString(@"NSBlock");
+        }
     }
     return propertyClass;
-}
-
-#pragma mark Debug introspection
-+ (id)methodDescriptionForClass:(Class)class {
-    SEL selector = (class ? NSSelectorFromString(@"__methodDescriptionForClass:") : NSSelectorFromString(@"_methodDescription"));
-    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[NSObject instanceMethodSignatureForSelector:selector]];
-    [invocation setTarget:self];
-    [invocation setSelector:selector];
-    if (class) {
-        [invocation setArgument:&class atIndex:2];
-    }
-    [invocation invoke];
-    NSString *result = nil;
-    [invocation getReturnValue:&result];
-    return result;
-}
-
-+ (id)ivarDescriptionForClass:(Class)class {
-    SEL selector = (class ? NSSelectorFromString(@"__ivarDescriptionForClass:") : NSSelectorFromString(@"_ivarDescription"));
-    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[NSObject instanceMethodSignatureForSelector:selector]];
-    [invocation setTarget:self];
-    [invocation setSelector:selector];
-    if (class) {
-        [invocation setArgument:&class atIndex:2];
-    }
-    [invocation invoke];
-    NSString *result = nil;
-    [invocation getReturnValue:&result];
-    return result;
 }
 
 @end

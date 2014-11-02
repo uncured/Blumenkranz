@@ -55,7 +55,7 @@
 
 + (CGFloat)randomFloat {
     CGFloat base = (CGFloat)arc4random() / arc4random();
-    return base - floor(base);
+    return base - floorf(base);
 }
 
 + (CGFloat)randomFloatFrom:(NSInteger)from to:(NSInteger)to {
