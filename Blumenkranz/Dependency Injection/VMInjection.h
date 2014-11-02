@@ -2,27 +2,27 @@
 #define Blumenkranz_VMInjection_h
 
 #define DEFAULT_CONTEXT_INITIALIZER @"initWithContext:"
-
-#define IS_SIGNLETONE(object) [(object) respondsToSelector:NSSelectorFromString(@"vm_isContextSingletone")]
+#define IS_SINGLETONE_METHOD_NAME @"vm_isContextSingletone"
+#define CONTEXT_NAME_METHOD_NAME @"vm_contextName"
 
 #define SINGLETONE \
-- (BOOL)vm_isContextSingletone { \
-    return YES; \
-} \
 + (BOOL)vm_isContextSingletone { \
     return YES; \
 }
 
-#define IS_NAMED(object) [(object) respondsToSelector:NSSelectorFromString(@"vm_isContextName")]
-
-#define BINDED_NAME(object) ([(object) respondsToSelector:NSSelectorFromString(@"vm_isContextName")] ? [(object) valueForKey:@"vm_isContextName"] : NSStringFromClass([(object) class]))
+#define NOT_SINGLETONE \
++ (BOOL)vm_isContextSingletone { \
+    return NO; \
+}
 
 #define BIND_NAME(name) \
-- (NSString *)vm_isContextName { \
++ (NSString *)vm_contextName { \
     return name; \
-} \
-+ (NSString *)vm_isContextName { \
-    return name; \
+}
+
+#define UNBIND_NAME \
++ (NSString *)vm_contextName { \
+    return nil; \
 }
 
 #define INJECTION_BEGIN(context_class) \
@@ -34,7 +34,7 @@
             if (identifier) { \
                 [self setValue:[context provide:(identifier)] forKey:(property)]; \
             } else { \
-                [self setValue:[context provide:[[self class] classOfProperty:property]] forKey:(property)]; \
+                [self setValue:[context provide:[[self class] classOfProperty:(property)]] forKey:(property)]; \
             } \
             if ([self conformsToProtocol:@protocol(VMContextInjecting)]) { \
                 [self performSelector:@selector(propertyInjected:) withObject:property]; \
@@ -48,7 +48,5 @@
     } \
     return self; \
 }
-
-
 
 #endif

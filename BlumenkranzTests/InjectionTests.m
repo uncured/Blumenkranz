@@ -124,7 +124,7 @@ BIND_NAME(@"TestSingletone")
     
     XCTAssertFalse(object == object2, @"Objects %@ and %@ shouldn't be identical.", object, object2);
     
-    id name = [object vm_isContextName];
+    id name = [[object class] vm_contextName];
     XCTAssertEqualObjects(name, @"NamedObject", @"Named object has unpredicted name => %@", name);
     
     id binding = [[[VMContext context] bindingManager] bindTarget:name];

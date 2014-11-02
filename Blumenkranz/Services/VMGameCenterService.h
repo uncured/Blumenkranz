@@ -1,5 +1,7 @@
 @import GameKit;
 
+#import "VMTypes.h"
+
 @interface VMGameCenterService : NSObject <GKGameCenterControllerDelegate>
 @property (nonatomic, copy) VMViewControllerBlock controllerWillPresentBlock;
 @property (nonatomic, copy) VMViewControllerBlock controllerDidPresentBlock;

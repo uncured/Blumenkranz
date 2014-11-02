@@ -1,5 +1,6 @@
 #import <XCTest/XCTest.h>
 #import "VMActiveModel.h"
+#import "VMAssertion.h"
 
 #pragma mark Mock objects
 @interface MockActiveModel : VMActiveModel

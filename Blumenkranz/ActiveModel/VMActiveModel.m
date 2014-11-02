@@ -1,4 +1,5 @@
 #import "VMActiveModel.h"
+#import "VMTypes.h"
 
 @implementation VMActiveModel
 

@@ -1,5 +1,7 @@
 #import "VMContextBindingManager.h"
 #import "VMClassCheckUtils.h"
+#import "VMAssertion.h"
+#import "VMLog.h"
 
 @interface VMContextBindingManager ()
 @property (nonatomic, strong) NSMutableDictionary *bindings;

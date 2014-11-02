@@ -39,7 +39,7 @@ static void initialize(VMCircularLoaderView *self) {
 
 - (void)drawRect:(CGRect)rect {
     for (NSUInteger idx = [[self.layer sublayers] count]; idx > 0; idx--) {
-        CALayer *layer = [[self.layer sublayers] objectAtIndex:(idx - 1)];
+        CALayer *layer = [self.layer sublayers][idx - 1];
         if ([layer isKindOfClass:[CAShapeLayer class]]) {
             [layer removeAllAnimations];
             [layer removeFromSuperlayer];

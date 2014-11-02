@@ -1,6 +1,7 @@
 #import "VMRandom.h"
 #import "UIColor+VMExtension.h"
 #import "NSString+VMExtension.h"
+#import "VMAssertion.h"
 
 @implementation VMRandom
 

@@ -1,11 +1,12 @@
 #import "VMGameCenterService.h"
+#import "NSObject+VMExtension.h"
 
 @implementation VMGameCenterService {
     BOOL _animated;
 }
 
 - (instancetype)init {
-    return [[self class] singletone];
+    return (VMGameCenterService *)[[self class] singletone];
 }
 
 - (void)dealloc {

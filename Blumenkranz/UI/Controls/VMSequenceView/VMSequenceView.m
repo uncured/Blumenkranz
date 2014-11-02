@@ -1,4 +1,5 @@
 #import "VMSequenceView.h"
+#import "VMAssertion.h"
 
 NSString * const VMSequenceViewErrorDomain = @"ru.visualmyth.blumenkranz.VMSequenceView";
 static const NSTimeInterval VMSequenceViewAnimationDuration = .3f;
@@ -68,7 +69,7 @@ static const NSTimeInterval VMSequenceViewAnimationDuration = .3f;
         if (barNumberToDisplay < barNumberDisplayed) {
             
             for (NSUInteger idx = 0; idx < (barNumberDisplayed - barNumberToDisplay); idx++) {
-                [[self.layer.sublayers objectAtIndex:idx] removeFromSuperlayer];
+                [self.layer.sublayers[idx] removeFromSuperlayer];
             }
             
         } else if (barNumberToDisplay > barNumberDisplayed) {
@@ -82,7 +83,7 @@ static const NSTimeInterval VMSequenceViewAnimationDuration = .3f;
         }
         
         for (NSUInteger idx = 0; idx < barNumberToDisplay; idx++) {
-            CALayer *layer = [self.layer.sublayers objectAtIndex:idx];
+            CALayer *layer = self.layer.sublayers[idx];
             layer.frame = CGRectMake(
                                      barWidth * idx,
                                      0,
@@ -91,8 +92,8 @@ static const NSTimeInterval VMSequenceViewAnimationDuration = .3f;
         }
         
         for (NSUInteger idx = 0; idx < barNumberToDisplay; idx++) {
-            CALayer *layer = [self.layer.sublayers objectAtIndex:barNumberToDisplay - idx - 1];
-            CGFloat sequenceItem = [[self.sequence objectAtIndex:idx] floatValue];
+            CALayer *layer = self.layer.sublayers[barNumberToDisplay - idx - 1];
+            CGFloat sequenceItem = [self.sequence[idx] floatValue];
             
             CGRect layerFrame = layer.frame;
             layerFrame.size.height = self.frame.size.height / self.maxValue * sequenceItem;

@@ -1,3 +1,5 @@
+#import "VMTypes.h"
+
 @protocol VMActiveModelManipulating <NSObject>
 
 - (void)save:(VMErrorsBlock)errorCallback;

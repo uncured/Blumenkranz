@@ -1,9 +1,10 @@
 #import "VMContext.h"
-#import "VMContextProviding.h"
 #import "VMClassCheckUtils.h"
 #import "VMContextBindingManager.h"
 #import "VMSingletone.h"
 #import "VMInjection.h"
+#import "VMAssertion.h"
+#import "VMLog.h"
 
 @interface VMContext ()
 @property (nonatomic, strong) VMContextBindingManager *bindingManager;
@@ -60,8 +61,8 @@
 - (void)bindDefaultInitializer:(SEL)initializer withParameteres:(NSArray *)parameters for:(Class)objectClassifier {
     VMExist(initializer);
     VMExist(objectClassifier);
-    NSAssert([objectClassifier respondsToSelector:initializer], @"Can't bind %@ initializer to %@ class.", NSStringFromSelector(initializer), NSStringFromClass(objectClassifier));
-    
+    NSAssert([objectClassifier respondsToSelector:initializer], @"Can't bind %@ initializer to %@ class. Class can't respond to such selector.", NSStringFromSelector(initializer), NSStringFromClass(objectClassifier));
+
     NSArray *parametersCopy = [parameters copy];
     
     [self bindProviderBlock:^id(){
@@ -85,7 +86,7 @@
     } for:objectClassifier];
 }
 
-- (void)unbindProvider:(id)objectClassifier {
+- (void)unbindProviderFor:(id)objectClassifier {
     VMExist(objectClassifier);
     
     id key = [self keyFor:objectClassifier];
@@ -158,21 +159,22 @@
         }
     }
     
-    VMLog(@"WARNING: Context cannot provide anything for %@ key", objectClassifier);
+    VMLog(@"WARNING: Context cannot provide anything for %@ classifier", objectClassifier);
     
     return nil;
 }
 
 - (id)vm_storeOnProvide:(id)providedObject {
-    if (IS_SIGNLETONE(providedObject)) {
+    Class providedObjectClass = [providedObject class];
+    if ([self vm_isSingletone:providedObjectClass]) {
+
+        [self registerSingletone:providedObject withName:[self vm_bindedNameFor:providedObjectClass]];
+
+    } else if ([self vm_isNamed:providedObjectClass]) {
         
-        [self registerSingletone:providedObject withName:BINDED_NAME(providedObject)];
-        
-    } else if (IS_NAMED(providedObject)) {
-        
-        id bindedName = BINDED_NAME(providedObject);
+        id bindedName = [self vm_bindedNameFor:providedObjectClass];
         if (![self.bindingManager bindTarget:bindedName]) {
-            [self.bindingManager bind:BINDED_NAME(providedObject) to:[providedObject class]];
+            [self.bindingManager bind:[self vm_bindedNameFor:providedObjectClass] to:providedObjectClass];
         }
         
     }
@@ -182,8 +184,8 @@
 #pragma mark VMKeyProviding interface
 - (id)keyFor:(id)keyBase {
     if (vmIsClass(keyBase)) {
-        if (IS_NAMED(keyBase)) {
-            return BINDED_NAME(keyBase);
+        if ([self vm_isNamed:keyBase]) {
+            return [self vm_bindedNameFor:keyBase];
         } else {
             return NSStringFromClass(keyBase);
         }
@@ -205,6 +207,22 @@
 
 - (void)unbind:(id)source {
     [self.bindingManager unbind:source];
+}
+
+#pragma mark Inner helpers
+- (BOOL)vm_isSingletone:(id)object {
+    return [object respondsToSelector:NSSelectorFromString(IS_SINGLETONE_METHOD_NAME)] && [[object valueForKey:IS_SINGLETONE_METHOD_NAME] boolValue];
+}
+
+- (BOOL)vm_isNamed:(id)object {
+    return [object respondsToSelector:NSSelectorFromString(CONTEXT_NAME_METHOD_NAME)] && [object valueForKey:CONTEXT_NAME_METHOD_NAME];
+}
+
+- (NSString *)vm_bindedNameFor:(id)object {
+    if ([self vm_isNamed:object]) {
+        return [object valueForKey:CONTEXT_NAME_METHOD_NAME];
+    }
+    return NSStringFromClass(object);
 }
 
 @end

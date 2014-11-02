@@ -1,4 +1,5 @@
 #import "VMValidatableModel.h"
+#import "VMTypes.h"
 
 NSString * const VMValidationErrorDomain = @"ru.visualmyth.blumenkranz.VMValidatableModel";
 NSString * const VMValidationErrorTargetProperty = @"validation_target_property";

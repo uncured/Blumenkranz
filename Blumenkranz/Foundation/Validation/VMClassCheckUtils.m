@@ -1,4 +1,5 @@
 #import "VMClassCheckUtils.h"
+#import <objc/runtime.h>
 
 BOOL vmIsClass(id validationObject) {
     return class_isMetaClass(object_getClass(validationObject));

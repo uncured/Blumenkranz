@@ -1,5 +1,6 @@
 #import "VMContextProviding.h"
 #import "VMKeyProviding.h"
+#import "VMTypes.h"
 
 @interface VMContext : NSObject <VMContextProviding, VMKeyProviding>
 
@@ -11,9 +12,9 @@
 
 - (void)bindProvider:(id<VMContextProviding>)provider for:(id)objectClassifier;
 
-- (void)bindDefaultInitializer:(SEL)initializer withParameteres:(NSDictionary *)parameters for:(Class)objectClassifier;
+- (void)bindDefaultInitializer:(SEL)initializer withParameteres:(NSArray *)parameters for:(Class)objectClassifier;
 
-- (void)unbindProvider:(id)objectClassifier;
+- (void)unbindProviderFor:(id)objectClassifier;
 
 - (void)registerSingletone:(id)object withName:(NSString *)name;
 
