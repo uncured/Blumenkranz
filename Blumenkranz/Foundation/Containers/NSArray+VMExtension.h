@@ -16,4 +16,12 @@ extern NSString * const NSArrayVMExtensionDomain;
 
 - (NSSet *)exclusion:(NSArray *)array;
 
+- (NSMutableArray *)deepMutableCopy;
+
+- (NSArray *)deepImmutableCopy;
+
+- (NSMutableArray *)deepMutableClone:(BOOL *)success error:(NSError **)error;
+
+- (NSArray *)deepImmutableClone:(BOOL *)success error:(NSError **)error;
+
 @end

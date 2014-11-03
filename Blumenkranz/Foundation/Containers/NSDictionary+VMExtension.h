@@ -16,4 +16,12 @@ extern NSString * const NSDictionaryVMExtensionDomain;
 
 - (NSDictionary *)dictionaryByMerge:(NSDictionary *)dictionary type:(VMDictionaryMergeType)type error:(NSError **)error;
 
+- (NSMutableDictionary *)deepMutableCopy;
+
+- (NSDictionary *)deepImmutableCopy;
+
+- (NSMutableDictionary *)deepMutableClone:(BOOL *)success error:(NSError **)error;
+
+- (NSDictionary *)deepImmutableClone:(BOOL *)success error:(NSError **)error;
+
 @end

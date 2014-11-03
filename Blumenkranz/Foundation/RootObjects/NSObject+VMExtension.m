@@ -47,3 +47,11 @@
 }
 
 @end
+
+BOOL vmObjectCanBeCopied(id target) {
+    return [target respondsToSelector:@selector(copy)] && [target respondsToSelector:@selector(copyWithZone:)];
+}
+
+BOOL vmObjectCanBeCopiedMutably(id target) {
+    return [target respondsToSelector:@selector(mutableCopy)] && [target respondsToSelector:NSSelectorFromString(@"mutableCopyWithZone:")];
+}

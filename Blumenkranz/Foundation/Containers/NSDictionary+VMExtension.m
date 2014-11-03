@@ -1,5 +1,6 @@
 #import "NSDictionary+VMExtension.h"
 #import "NSArray+VMExtension.h"
+#import "NSObject+VMExtension.h"
 
 const NSInteger NSDictionaryObjectCannotBeCopiedErrorCode = 100;
 const NSInteger NSDictionaryObjectCannotBeMergedErrorCode = 101;
@@ -23,11 +24,11 @@ NSString * const NSDictionaryVMExtensionDomain = @"ru.visualmyth.blumenkranz.NSD
         for (id keyForMerge in [keysForMerge allObjects]) {
             id object = dictionary[keyForMerge];
             if (needToCopyObjects) {
-                if ([object respondsToSelector:@selector(copy)] && [object respondsToSelector:@selector(copyWithZone:)]) {
+                if (vmObjectCanBeCopied(object)) {
                     object = [object copy];
                 } else {
                     if (error) {
-                        *error = [NSDictionary vm_objectCopyError:keyForMerge];
+                        *error = [NSDictionary vm_objectCopyError:keyForMerge underlyingError:nil];
                     }
                     return nil;
                 }
@@ -53,11 +54,11 @@ NSString * const NSDictionaryVMExtensionDomain = @"ru.visualmyth.blumenkranz.NSD
             if (needToReplaceExistingKeys && !(needToJoinExistingKeys && (isMergingDictionaries || isMergingArrays))) {
 
                 if (needToCopyObjects) {
-                    if ([mergeObject respondsToSelector:@selector(copy)] && [mergeObject respondsToSelector:@selector(copyWithZone:)]) {
+                    if (vmObjectCanBeCopied(mergeObject)) {
                         mergeObject = [mergeObject copy];
                     } else {
                         if (error) {
-                            *error = [NSDictionary vm_objectCopyError:keyForMerge];
+                            *error = [NSDictionary vm_objectCopyError:keyForMerge underlyingError:nil];
                         }
                         return nil;
                     }
@@ -96,12 +97,109 @@ NSString * const NSDictionaryVMExtensionDomain = @"ru.visualmyth.blumenkranz.NSD
     return [resultDictionary copy];
 }
 
-+ (NSError *)vm_objectCopyError:(id)key {
+- (NSMutableDictionary *)deepMutableCopy {
+    NSMutableDictionary *copyResult = [NSMutableDictionary dictionary];
+    for (id key in self) {
+        id object = self[key];
+        if ([object isKindOfClass:[NSArray class]] || [object isKindOfClass:[NSDictionary class]]) {
+            copyResult[key] = [object deepMutableCopy];
+        } else {
+            copyResult[key] = object;
+        }
+    }
+    return copyResult;
+}
+
+- (NSDictionary *)deepImmutableCopy {
+    NSMutableDictionary *copyResult = [NSMutableDictionary dictionary];
+    for (id key in self) {
+        id object = self[key];
+        if ([object isKindOfClass:[NSArray class]] || [object isKindOfClass:[NSDictionary class]]) {
+            copyResult[key] = [object deepImmutableCopy];
+        } else {
+            copyResult[key] = object;
+        }
+    }
+    return [NSDictionary dictionaryWithDictionary:copyResult];
+}
+
+- (NSMutableDictionary *)deepMutableClone:(BOOL *)success error:(NSError **)error {
+    NSMutableDictionary *copyResult = [NSMutableDictionary dictionary];
+    NSMutableArray *errorFields = [NSMutableArray array];
+
+    for (id key in self) {
+        id object = self[key];
+        if ([object isKindOfClass:[NSArray class]] || [object isKindOfClass:[NSDictionary class]]) {
+
+            BOOL underlyingSuccess;
+            copyResult[key] = [object deepMutableClone:&underlyingSuccess error:nil];
+            if (!underlyingSuccess) {
+                [errorFields addObject:key];
+            }
+
+        } else if (vmObjectCanBeCopiedMutably(object)) {
+
+            copyResult[key] = [object mutableCopy];
+
+        } else if (vmObjectCanBeCopied(object)) {
+
+            copyResult[key] = [object copy];
+
+        } else {
+
+            [errorFields addObject:key];
+            copyResult[key] = object;
+
+        }
+    }
+
+    [self vm_triggerCopyError:error state:success fields:errorFields];
+
+    return copyResult;
+}
+
+- (NSDictionary *)deepImmutableClone:(BOOL *)success error:(NSError **)error {
+    NSMutableDictionary *copyResult = [NSMutableDictionary dictionary];
+    NSMutableArray *errorFields = [NSMutableArray array];
+
+    for (id key in self) {
+        id object = self[key];
+        if ([object isKindOfClass:[NSArray class]] || [object isKindOfClass:[NSDictionary class]]) {
+
+            BOOL underlyingSuccess;
+            copyResult[key] = [object deepImmutableClone:&underlyingSuccess error:nil];
+            if (!underlyingSuccess) {
+                [errorFields addObject:key];
+            }
+
+        } else if (vmObjectCanBeCopied(object)) {
+
+            copyResult[key] = [object copy];
+
+        } else {
+
+            [errorFields addObject:key];
+            copyResult[key] = object;
+
+        }
+    }
+
+    [self vm_triggerCopyError:error state:success fields:errorFields];
+
+    return [NSDictionary dictionaryWithDictionary:copyResult];
+}
+
+#pragma mark Inner methods
++ (NSError *)vm_objectCopyError:(id)key underlyingError:(NSError *)underlyingError {
+    NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
+    userInfo[NSLocalizedDescriptionKey] = [NSString stringWithFormat:@"Object for key [%@] cannot be copied.", key];
+    if (underlyingError) {
+        userInfo[NSUnderlyingErrorKey] = underlyingError;
+    }
+
     return [NSError errorWithDomain:NSDictionaryVMExtensionDomain
-                    code:NSDictionaryObjectCannotBeCopiedErrorCode
-                    userInfo:@{
-                        NSLocalizedDescriptionKey : [NSString stringWithFormat:@"Object for key [%@] cannot be copied.", key]
-                    }
+                               code:NSDictionaryObjectCannotBeCopiedErrorCode
+                           userInfo:userInfo
     ];
 }
 
@@ -112,6 +210,31 @@ NSString * const NSDictionaryVMExtensionDomain = @"ru.visualmyth.blumenkranz.NSD
                                    NSLocalizedDescriptionKey : [NSString stringWithFormat:@"Object [%@] cannot be deep merged with [%@].", existingObject, mergeObject]
                            }
     ];
+}
+
+- (void)vm_triggerCopyError:(NSError **)error state:(BOOL *)success fields:(NSArray *)errorFields {
+    if (error) {
+        if ([errorFields count]) {
+            *success = NO;
+            NSString *description = [NSString stringWithFormat:@"Can't fully copy object at keys: %@", [errorFields componentsJoinedByString:@", "]];
+            NSError *underlyingError = [NSError errorWithDomain:NSDictionaryVMExtensionDomain
+                                                           code:NSDictionaryObjectCannotBeCopiedErrorCode
+                                                       userInfo:@{
+                                                               NSLocalizedDescriptionKey: description
+                                                       }];
+
+            *error = [NSError errorWithDomain:NSDictionaryVMExtensionDomain
+                                       code:NSDictionaryObjectCannotBeCopiedErrorCode
+                                   userInfo:@{
+                                           NSLocalizedDescriptionKey: @"Object cannot be copied.",
+                                           NSUnderlyingErrorKey: underlyingError
+                                   }
+            ];
+        } else {
+            *success = YES;
+            *error = nil;
+        }
+    }
 }
 
 @end

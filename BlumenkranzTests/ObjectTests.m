@@ -65,4 +65,36 @@
     XCTAssertNil([MockBaseObject classOfProperty:@"someInvalidPropertyName"], @"MockBaseObject non-existing @someInvalidPropertyName property class should be invalidated.");
 }
 
+- (void)testCanBeCopied {
+    NSNumber *successCopyTarget = @(1);
+    XCTAssertTrue(vmObjectCanBeCopied(successCopyTarget), @"NSNumber should be copiable object.");
+
+    NSObject *failCopyTarget = [[NSObject alloc] init];
+    XCTAssertFalse(vmObjectCanBeCopied(failCopyTarget), @"NSObject should not be copiable object.");
+
+    void (^successCopyBlockTarget)() = ^(){
+        NSLog(@"Simple block");
+    };
+    XCTAssertTrue(vmObjectCanBeCopied(successCopyBlockTarget), @"NSBlock should be copiable object.");
+}
+
+- (void)testCanBeCopiedMutably {
+    NSNumber *failCopyTargetOne = @(1);
+    XCTAssertFalse(vmObjectCanBeCopiedMutably(failCopyTargetOne), @"NSNumber should not be mutably copiable object.");
+    
+    NSObject *failCopyTargetTwo = [[NSObject alloc] init];
+    XCTAssertFalse(vmObjectCanBeCopiedMutably(failCopyTargetTwo), @"NSObject should not be mutably copiable object.");
+    
+    void (^failCopyBlockTarget)() = ^(){
+        NSLog(@"Simple block");
+    };
+    XCTAssertFalse(vmObjectCanBeCopiedMutably(failCopyBlockTarget), @"NSBlock should not be mutably copiable object.");
+    
+    NSArray *successCopyTargetOne = @[ @(1), @"2" ];
+    XCTAssertTrue(vmObjectCanBeCopiedMutably(successCopyTargetOne), @"NSArray should be mutably copiable object.");
+    
+    NSString *successCopyTargetTwo = @"Immutable string";
+    XCTAssertTrue(vmObjectCanBeCopiedMutably(successCopyTargetTwo), @"NSString should be mutably copiable object.");
+}
+
 @end
