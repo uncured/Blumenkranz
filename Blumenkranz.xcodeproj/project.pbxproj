@@ -41,6 +41,8 @@
 		6E47163319C614E1004F1BD3 /* VMCircularLoaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E47163119C614E1004F1BD3 /* VMCircularLoaderView.h */; };
 		6E47163419C614E1004F1BD3 /* VMCircularLoaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E47163219C614E1004F1BD3 /* VMCircularLoaderView.m */; };
 		6E47163519C614E1004F1BD3 /* VMCircularLoaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E47163219C614E1004F1BD3 /* VMCircularLoaderView.m */; };
+		6E4730541A0F9756008F2C27 /* VMYandexTrafficDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4730531A0F9756008F2C27 /* VMYandexTrafficDataProvider.swift */; };
+		6E4730561A0F97ED008F2C27 /* Blumenkranz-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4730551A0F97ED008F2C27 /* Blumenkranz-Bridging-Header.h */; };
 		6E7DBA0018CB89E6004B876C /* NSArray+VMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E7DB9FE18CB89E6004B876C /* NSArray+VMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E7DBA0118CB89E6004B876C /* NSArray+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7DB9FF18CB89E6004B876C /* NSArray+VMExtension.m */; };
 		6E7DBA0518CB8A31004B876C /* UIColor+VMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E7DBA0318CB8A31004B876C /* UIColor+VMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -151,6 +153,8 @@
 		6E37F14218C8F734000BD94B /* BlumenkranzTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlumenkranzTests.m; sourceTree = "<group>"; };
 		6E47163119C614E1004F1BD3 /* VMCircularLoaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMCircularLoaderView.h; sourceTree = "<group>"; };
 		6E47163219C614E1004F1BD3 /* VMCircularLoaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMCircularLoaderView.m; sourceTree = "<group>"; };
+		6E4730531A0F9756008F2C27 /* VMYandexTrafficDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMYandexTrafficDataProvider.swift; sourceTree = "<group>"; };
+		6E4730551A0F97ED008F2C27 /* Blumenkranz-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Blumenkranz-Bridging-Header.h"; sourceTree = "<group>"; };
 		6E7DB9FE18CB89E6004B876C /* NSArray+VMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+VMExtension.h"; sourceTree = "<group>"; };
 		6E7DB9FF18CB89E6004B876C /* NSArray+VMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+VMExtension.m"; sourceTree = "<group>"; };
 		6E7DBA0318CB8A31004B876C /* UIColor+VMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+VMExtension.h"; sourceTree = "<group>"; };
@@ -300,6 +304,7 @@
 		6E37F12818C8F734000BD94B /* Blumenkranz */ = {
 			isa = PBXGroup;
 			children = (
+				6E4730501A0F96CC008F2C27 /* DataProviders */,
 				6ED45C4019140CB20022AAF9 /* ActiveModel */,
 				6ED4831D19043F4B00C82AA1 /* Interfaces */,
 				6E1C97D318F477B0008059A8 /* Dependency Injection */,
@@ -316,6 +321,7 @@
 		6E37F12918C8F734000BD94B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6E4730551A0F97ED008F2C27 /* Blumenkranz-Bridging-Header.h */,
 				6E37F12A18C8F734000BD94B /* Blumenkranz-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -376,6 +382,22 @@
 				6E47163219C614E1004F1BD3 /* VMCircularLoaderView.m */,
 			);
 			path = VMCircularLoaderView;
+			sourceTree = "<group>";
+		};
+		6E4730501A0F96CC008F2C27 /* DataProviders */ = {
+			isa = PBXGroup;
+			children = (
+				6E4730511A0F96CC008F2C27 /* GEO */,
+			);
+			path = DataProviders;
+			sourceTree = "<group>";
+		};
+		6E4730511A0F96CC008F2C27 /* GEO */ = {
+			isa = PBXGroup;
+			children = (
+				6E4730531A0F9756008F2C27 /* VMYandexTrafficDataProvider.swift */,
+			);
+			path = GEO;
 			sourceTree = "<group>";
 		};
 		6E7DBA0218CB8A1F004B876C /* Graphics */ = {
@@ -537,6 +559,7 @@
 				6E9B1A4318CDE3EE0024FF97 /* VMSequenceView.h in Headers */,
 				6E7DBA1E18CB9739004B876C /* NSString+VMExtension.h in Headers */,
 				6ED45C4319140CE50022AAF9 /* VMActiveModel.h in Headers */,
+				6E4730561A0F97ED008F2C27 /* Blumenkranz-Bridging-Header.h in Headers */,
 				6E47163319C614E1004F1BD3 /* VMCircularLoaderView.h in Headers */,
 				6ED4831F19043FAB00C82AA1 /* VMKeyProviding.h in Headers */,
 				6ED45C4619140D260022AAF9 /* VMActiveModelManipulating.h in Headers */,
@@ -719,6 +742,7 @@
 				6E0D7DBC18CCFF4200E99516 /* NSMutableDictionary+VMExtension.m in Sources */,
 				6E9B1A4418CDE3EE0024FF97 /* VMSequenceView.m in Sources */,
 				6EB7FCAF1A06D54500986315 /* CTBlockDescription.m in Sources */,
+				6E4730541A0F9756008F2C27 /* VMYandexTrafficDataProvider.swift in Sources */,
 				6E7DBA1F18CB9739004B876C /* NSString+VMExtension.m in Sources */,
 				6E7DBA0A18CB8A8B004B876C /* UIImage+VMExtension.m in Sources */,
 				6ED45C4419140CE50022AAF9 /* VMActiveModel.m in Sources */,
@@ -866,24 +890,31 @@
 		6E37F14718C8F734000BD94B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DSTROOT = /tmp/Blumenkranz.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Blumenkranz/Blumenkranz-Prefix.pch";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Blumenkranz/DataProviders/GEO/Blumenkranz-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		6E37F14818C8F734000BD94B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DSTROOT = /tmp/Blumenkranz.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Blumenkranz/Blumenkranz-Prefix.pch";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Blumenkranz/DataProviders/GEO/Blumenkranz-Bridging-Header.h";
 			};
 			name = Release;
 		};
