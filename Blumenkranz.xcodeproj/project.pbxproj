@@ -6,22 +6,6 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		6EA8DAF318C8FCB200F04908 /* Blumenkranz Framework */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 6EA8DAF418C8FCB200F04908 /* Build configuration list for PBXAggregateTarget "Blumenkranz Framework" */;
-			buildPhases = (
-				6EA8DAF918C8FD1900F04908 /* ShellScript */,
-			);
-			dependencies = (
-				6EA8DB0E18C8FFDA00F04908 /* PBXTargetDependency */,
-				6EA8DAF818C8FCDD00F04908 /* PBXTargetDependency */,
-			);
-			name = "Blumenkranz Framework";
-			productName = "Blumenkranz Framework";
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		6E0D7DBB18CCFF4200E99516 /* NSMutableDictionary+VMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E0D7DB918CCFF4200E99516 /* NSMutableDictionary+VMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E0D7DBC18CCFF4200E99516 /* NSMutableDictionary+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D7DBA18CCFF4200E99516 /* NSMutableDictionary+VMExtension.m */; };
@@ -33,16 +17,71 @@
 		6E1C97D718F477CA008059A8 /* VMContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1C97D518F477CA008059A8 /* VMContext.m */; };
 		6E1C97DD18F47C7A008059A8 /* VMClassCheckUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E1C97DB18F47C7A008059A8 /* VMClassCheckUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E1C97DE18F47C7A008059A8 /* VMClassCheckUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1C97DC18F47C7A008059A8 /* VMClassCheckUtils.m */; };
+		6E2677621A17FC7400A42ECB /* BlumenkranzFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E2677611A17FC7400A42ECB /* BlumenkranzFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E26777B1A17FCAE00A42ECB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA8DAEC18C8FB1D00F04908 /* UIKit.framework */; };
+		6E26777C1A17FCB300A42ECB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E37F12618C8F734000BD94B /* Foundation.framework */; };
+		6E26777D1A17FCBB00A42ECB /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EFA223318CBAA7500F7EA40 /* GameKit.framework */; };
+		6E26777F1A17FD2500A42ECB /* VMActiveModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ED45C4119140CE50022AAF9 /* VMActiveModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E2677801A17FD2500A42ECB /* VMActiveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED45C4219140CE50022AAF9 /* VMActiveModel.m */; };
+		6E2677811A17FD2500A42ECB /* VMValidatableModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EA2F4A619155EF200D4DCFC /* VMValidatableModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E2677821A17FD2500A42ECB /* VMValidatableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA2F4A719155EF200D4DCFC /* VMValidatableModel.m */; };
+		6E2677831A17FD2500A42ECB /* VMActiveModelManipulating.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ED45C4519140D220022AAF9 /* VMActiveModelManipulating.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E2677841A17FD2500A42ECB /* VMModelValidating.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EA2F4AA19155F1100D4DCFC /* VMModelValidating.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E2677851A17FD2500A42ECB /* VMActiveModelValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ED45C4719140F570022AAF9 /* VMActiveModelValidation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E2677861A17FD2C00A42ECB /* VMKeyProviding.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ED4831E19043F6300C82AA1 /* VMKeyProviding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E2677871A17FD4A00A42ECB /* VMContextProviding.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E1C97D918F478D7008059A8 /* VMContextProviding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E2677881A17FD5200A42ECB /* VMContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E1C97D418F477CA008059A8 /* VMContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E2677891A17FD5200A42ECB /* VMContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1C97D518F477CA008059A8 /* VMContext.m */; };
+		6E26778A1A17FD5200A42ECB /* VMInjection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E1C97D818F477F5008059A8 /* VMInjection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E26778B1A17FD5200A42ECB /* VMContextInjecting.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ED483161904387400C82AA1 /* VMContextInjecting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E26778C1A17FD5200A42ECB /* VMContextProviding.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E1C97D918F478D7008059A8 /* VMContextProviding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E26778D1A17FD5200A42ECB /* VMContextBindingManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ED4831919043C2E00C82AA1 /* VMContextBindingManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E26778E1A17FD5200A42ECB /* VMContextBindingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED4831A19043C2E00C82AA1 /* VMContextBindingManager.m */; };
+		6E26778F1A17FD5800A42ECB /* VMGameCenterService.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EFA222F18CBAA6200F7EA40 /* VMGameCenterService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E2677901A17FD5800A42ECB /* VMGameCenterService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFA223018CBAA6200F7EA40 /* VMGameCenterService.m */; };
+		6E2677911A17FD6200A42ECB /* VMRandom.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E7DBA1318CB8D0A004B876C /* VMRandom.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E2677921A17FD6200A42ECB /* VMRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7DBA1418CB8D0A004B876C /* VMRandom.m */; };
+		6E2677931A17FD6700A42ECB /* CTBlockDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EB7FCAC1A06D54500986315 /* CTBlockDescription.h */; };
+		6E2677941A17FD6700A42ECB /* CTBlockDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB7FCAD1A06D54500986315 /* CTBlockDescription.m */; };
+		6E2677951A17FD6C00A42ECB /* VMLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ED483211904445E00C82AA1 /* VMLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E2677961A17FD7000A42ECB /* VMClassCheckUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E1C97DB18F47C7A008059A8 /* VMClassCheckUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E2677971A17FD7000A42ECB /* VMClassCheckUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1C97DC18F47C7A008059A8 /* VMClassCheckUtils.m */; };
+		6E2677981A17FD7500A42ECB /* NSString+VMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E7DBA1C18CB9739004B876C /* NSString+VMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E2677991A17FD7500A42ECB /* NSString+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7DBA1D18CB9739004B876C /* NSString+VMExtension.m */; };
+		6E26779A1A17FD7A00A42ECB /* NSObject+VMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E7DBA0F18CB8C77004B876C /* NSObject+VMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E26779B1A17FD7A00A42ECB /* NSObject+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7DBA1018CB8C77004B876C /* NSObject+VMExtension.m */; };
+		6E26779C1A17FD8300A42ECB /* VMAssertion.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E7DBA0C18CB8AD9004B876C /* VMAssertion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E26779D1A17FD8300A42ECB /* VMTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EFA223518CBACC300F7EA40 /* VMTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E26779E1A17FD8300A42ECB /* VMPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E9B1A4518CDE5810024FF97 /* VMPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E26779F1A17FD8300A42ECB /* VMSingletone.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E1C97CE18F472FF008059A8 /* VMSingletone.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E2677A01A17FD8300A42ECB /* VMSingletone.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E1C97CE18F472FF008059A8 /* VMSingletone.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E2677A11A17FD8C00A42ECB /* NSDictionary+VMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E839A3A18CB893700664C67 /* NSDictionary+VMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E2677A21A17FD8C00A42ECB /* NSDictionary+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E839A3B18CB893700664C67 /* NSDictionary+VMExtension.m */; };
+		6E2677A31A17FD8C00A42ECB /* NSMutableDictionary+VMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E0D7DB918CCFF4200E99516 /* NSMutableDictionary+VMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E2677A41A17FD8C00A42ECB /* NSMutableDictionary+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D7DBA18CCFF4200E99516 /* NSMutableDictionary+VMExtension.m */; };
+		6E2677A51A17FD8C00A42ECB /* NSArray+VMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E7DB9FE18CB89E6004B876C /* NSArray+VMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E2677A61A17FD8C00A42ECB /* NSArray+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7DB9FF18CB89E6004B876C /* NSArray+VMExtension.m */; };
+		6E2677A71A17FD8C00A42ECB /* NSMutableArray+VMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E0D7DBD18CD088100E99516 /* NSMutableArray+VMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E2677A81A17FD8C00A42ECB /* NSMutableArray+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D7DBE18CD088100E99516 /* NSMutableArray+VMExtension.m */; };
+		6E2677A91A17FD9600A42ECB /* VMViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E1C97CF18F4732D008059A8 /* VMViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E2677AA1A17FD9600A42ECB /* VMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1C97D018F4732D008059A8 /* VMViewController.m */; };
+		6E2677AB1A17FD9C00A42ECB /* VMCircularLoaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E47163119C614E1004F1BD3 /* VMCircularLoaderView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E2677AC1A17FD9C00A42ECB /* VMCircularLoaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E47163219C614E1004F1BD3 /* VMCircularLoaderView.m */; };
+		6E2677AD1A17FDA100A42ECB /* VMSequenceView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E9B1A4118CDE3EE0024FF97 /* VMSequenceView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E2677AE1A17FDA100A42ECB /* VMSequenceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E9B1A4218CDE3EE0024FF97 /* VMSequenceView.m */; };
+		6E2677AF1A17FDA600A42ECB /* UIColor+VMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E7DBA0318CB8A31004B876C /* UIColor+VMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E2677B01A17FDA600A42ECB /* UIColor+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7DBA0418CB8A31004B876C /* UIColor+VMExtension.m */; };
+		6E2677B11A17FDA600A42ECB /* UIImage+VMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E7DBA0718CB8A8B004B876C /* UIImage+VMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E2677B21A17FDA600A42ECB /* UIImage+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7DBA0818CB8A8B004B876C /* UIImage+VMExtension.m */; };
+		6E2677B41A17FDE700A42ECB /* Blumenkranz.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E37F12B18C8F734000BD94B /* Blumenkranz.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E37F12718C8F734000BD94B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E37F12618C8F734000BD94B /* Foundation.framework */; };
 		6E37F13518C8F734000BD94B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E37F13418C8F734000BD94B /* XCTest.framework */; };
 		6E37F13618C8F734000BD94B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E37F12618C8F734000BD94B /* Foundation.framework */; };
 		6E37F13B18C8F734000BD94B /* libBlumenkranz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E37F12318C8F734000BD94B /* libBlumenkranz.a */; };
 		6E37F14318C8F734000BD94B /* BlumenkranzTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E37F14218C8F734000BD94B /* BlumenkranzTests.m */; };
-		6E47163319C614E1004F1BD3 /* VMCircularLoaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E47163119C614E1004F1BD3 /* VMCircularLoaderView.h */; };
+		6E47163319C614E1004F1BD3 /* VMCircularLoaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E47163119C614E1004F1BD3 /* VMCircularLoaderView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E47163419C614E1004F1BD3 /* VMCircularLoaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E47163219C614E1004F1BD3 /* VMCircularLoaderView.m */; };
 		6E47163519C614E1004F1BD3 /* VMCircularLoaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E47163219C614E1004F1BD3 /* VMCircularLoaderView.m */; };
-		6E4730541A0F9756008F2C27 /* VMYandexTrafficDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4730531A0F9756008F2C27 /* VMYandexTrafficDataProvider.swift */; };
-		6E4730561A0F97ED008F2C27 /* Blumenkranz-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4730551A0F97ED008F2C27 /* Blumenkranz-Bridging-Header.h */; };
 		6E7DBA0018CB89E6004B876C /* NSArray+VMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E7DB9FE18CB89E6004B876C /* NSArray+VMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E7DBA0118CB89E6004B876C /* NSArray+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7DB9FF18CB89E6004B876C /* NSArray+VMExtension.m */; };
 		6E7DBA0518CB8A31004B876C /* UIColor+VMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E7DBA0318CB8A31004B876C /* UIColor+VMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -106,21 +145,7 @@
 			remoteGlobalIDString = 6E37F12218C8F734000BD94B;
 			remoteInfo = Blumenkranz;
 		};
-		6EA8DAF718C8FCDD00F04908 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6E37F11B18C8F734000BD94B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6E37F12218C8F734000BD94B;
-			remoteInfo = Blumenkranz;
-		};
 		6EA8DB0B18C8FFCC00F04908 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6E37F11B18C8F734000BD94B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6EA8DAFD18C8FEB400F04908;
-			remoteInfo = "Blumenkranz Resources";
-		};
-		6EA8DB0D18C8FFDA00F04908 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6E37F11B18C8F734000BD94B /* Project object */;
 			proxyType = 1;
@@ -143,6 +168,11 @@
 		6E1C97D918F478D7008059A8 /* VMContextProviding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMContextProviding.h; sourceTree = "<group>"; };
 		6E1C97DB18F47C7A008059A8 /* VMClassCheckUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMClassCheckUtils.h; sourceTree = "<group>"; };
 		6E1C97DC18F47C7A008059A8 /* VMClassCheckUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMClassCheckUtils.m; sourceTree = "<group>"; };
+		6E2677561A17F9B600A42ECB /* Blumenkranz-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Blumenkranz-Bridging-Header.h"; sourceTree = "<group>"; };
+		6E26775D1A17FC7300A42ECB /* BlumenkranzFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BlumenkranzFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E2677601A17FC7400A42ECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E2677611A17FC7400A42ECB /* BlumenkranzFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlumenkranzFramework.h; sourceTree = "<group>"; };
+		6E2677B51A17FEF900A42ECB /* BlumenkranzFramework.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlumenkranzFramework.pch; sourceTree = "<group>"; };
 		6E37F12318C8F734000BD94B /* libBlumenkranz.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBlumenkranz.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E37F12618C8F734000BD94B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6E37F12A18C8F734000BD94B /* Blumenkranz-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Blumenkranz-Prefix.pch"; sourceTree = "<group>"; };
@@ -154,7 +184,6 @@
 		6E47163119C614E1004F1BD3 /* VMCircularLoaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMCircularLoaderView.h; sourceTree = "<group>"; };
 		6E47163219C614E1004F1BD3 /* VMCircularLoaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMCircularLoaderView.m; sourceTree = "<group>"; };
 		6E4730531A0F9756008F2C27 /* VMYandexTrafficDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMYandexTrafficDataProvider.swift; sourceTree = "<group>"; };
-		6E4730551A0F97ED008F2C27 /* Blumenkranz-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Blumenkranz-Bridging-Header.h"; sourceTree = "<group>"; };
 		6E7DB9FE18CB89E6004B876C /* NSArray+VMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+VMExtension.h"; sourceTree = "<group>"; };
 		6E7DB9FF18CB89E6004B876C /* NSArray+VMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+VMExtension.m"; sourceTree = "<group>"; };
 		6E7DBA0318CB8A31004B876C /* UIColor+VMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+VMExtension.h"; sourceTree = "<group>"; };
@@ -205,6 +234,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6E2677591A17FC7300A42ECB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E26777D1A17FCBB00A42ECB /* GameKit.framework in Frameworks */,
+				6E26777C1A17FCB300A42ECB /* Foundation.framework in Frameworks */,
+				6E26777B1A17FCAE00A42ECB /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6E37F12018C8F734000BD94B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -269,12 +308,31 @@
 			path = Validation;
 			sourceTree = "<group>";
 		};
+		6E26775E1A17FC7300A42ECB /* BlumenkranzFramework */ = {
+			isa = PBXGroup;
+			children = (
+				6E2677611A17FC7400A42ECB /* BlumenkranzFramework.h */,
+				6E26775F1A17FC7400A42ECB /* Supporting Files */,
+			);
+			path = BlumenkranzFramework;
+			sourceTree = "<group>";
+		};
+		6E26775F1A17FC7400A42ECB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6E2677601A17FC7400A42ECB /* Info.plist */,
+				6E2677B51A17FEF900A42ECB /* BlumenkranzFramework.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		6E37F11A18C8F734000BD94B = {
 			isa = PBXGroup;
 			children = (
 				6E37F12818C8F734000BD94B /* Blumenkranz */,
 				6E37F13C18C8F734000BD94B /* BlumenkranzTests */,
 				6EA8DB0118C8FEB400F04908 /* BlumenkranzResources */,
+				6E26775E1A17FC7300A42ECB /* BlumenkranzFramework */,
 				6E37F12518C8F734000BD94B /* Frameworks */,
 				6E37F12418C8F734000BD94B /* Products */,
 			);
@@ -286,6 +344,7 @@
 				6E37F12318C8F734000BD94B /* libBlumenkranz.a */,
 				6E37F13318C8F734000BD94B /* Blumenkranz Unit Tests.xctest */,
 				6EA8DAFE18C8FEB400F04908 /* Blumenkranz.bundle */,
+				6E26775D1A17FC7300A42ECB /* BlumenkranzFramework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -321,7 +380,6 @@
 		6E37F12918C8F734000BD94B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6E4730551A0F97ED008F2C27 /* Blumenkranz-Bridging-Header.h */,
 				6E37F12A18C8F734000BD94B /* Blumenkranz-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -395,6 +453,7 @@
 		6E4730511A0F96CC008F2C27 /* GEO */ = {
 			isa = PBXGroup;
 			children = (
+				6E2677561A17F9B600A42ECB /* Blumenkranz-Bridging-Header.h */,
 				6E4730531A0F9756008F2C27 /* VMYandexTrafficDataProvider.swift */,
 			);
 			path = GEO;
@@ -550,6 +609,46 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		6E26775A1A17FC7300A42ECB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E2677621A17FC7400A42ECB /* BlumenkranzFramework.h in Headers */,
+				6E26779D1A17FD8300A42ECB /* VMTypes.h in Headers */,
+				6E2677A11A17FD8C00A42ECB /* NSDictionary+VMExtension.h in Headers */,
+				6E26779F1A17FD8300A42ECB /* VMSingletone.h in Headers */,
+				6E26778A1A17FD5200A42ECB /* VMInjection.h in Headers */,
+				6E2677951A17FD6C00A42ECB /* VMLog.h in Headers */,
+				6E2677881A17FD5200A42ECB /* VMContext.h in Headers */,
+				6E26778B1A17FD5200A42ECB /* VMContextInjecting.h in Headers */,
+				6E26779A1A17FD7A00A42ECB /* NSObject+VMExtension.h in Headers */,
+				6E2677A31A17FD8C00A42ECB /* NSMutableDictionary+VMExtension.h in Headers */,
+				6E2677911A17FD6200A42ECB /* VMRandom.h in Headers */,
+				6E2677AB1A17FD9C00A42ECB /* VMCircularLoaderView.h in Headers */,
+				6E26777F1A17FD2500A42ECB /* VMActiveModel.h in Headers */,
+				6E26778D1A17FD5200A42ECB /* VMContextBindingManager.h in Headers */,
+				6E2677831A17FD2500A42ECB /* VMActiveModelManipulating.h in Headers */,
+				6E2677A51A17FD8C00A42ECB /* NSArray+VMExtension.h in Headers */,
+				6E26778C1A17FD5200A42ECB /* VMContextProviding.h in Headers */,
+				6E2677AD1A17FDA100A42ECB /* VMSequenceView.h in Headers */,
+				6E2677841A17FD2500A42ECB /* VMModelValidating.h in Headers */,
+				6E26778F1A17FD5800A42ECB /* VMGameCenterService.h in Headers */,
+				6E2677AF1A17FDA600A42ECB /* UIColor+VMExtension.h in Headers */,
+				6E2677851A17FD2500A42ECB /* VMActiveModelValidation.h in Headers */,
+				6E2677B11A17FDA600A42ECB /* UIImage+VMExtension.h in Headers */,
+				6E26779E1A17FD8300A42ECB /* VMPlatform.h in Headers */,
+				6E2677A71A17FD8C00A42ECB /* NSMutableArray+VMExtension.h in Headers */,
+				6E2677A91A17FD9600A42ECB /* VMViewController.h in Headers */,
+				6E2677811A17FD2500A42ECB /* VMValidatableModel.h in Headers */,
+				6E2677B41A17FDE700A42ECB /* Blumenkranz.h in Headers */,
+				6E2677961A17FD7000A42ECB /* VMClassCheckUtils.h in Headers */,
+				6E26779C1A17FD8300A42ECB /* VMAssertion.h in Headers */,
+				6E2677981A17FD7500A42ECB /* NSString+VMExtension.h in Headers */,
+				6E2677931A17FD6700A42ECB /* CTBlockDescription.h in Headers */,
+				6E2677861A17FD2C00A42ECB /* VMKeyProviding.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6EA8DAEF18C8FB8100F04908 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -558,9 +657,8 @@
 				6EFA223118CBAA6200F7EA40 /* VMGameCenterService.h in Headers */,
 				6E9B1A4318CDE3EE0024FF97 /* VMSequenceView.h in Headers */,
 				6E7DBA1E18CB9739004B876C /* NSString+VMExtension.h in Headers */,
+				6E2677871A17FD4A00A42ECB /* VMContextProviding.h in Headers */,
 				6ED45C4319140CE50022AAF9 /* VMActiveModel.h in Headers */,
-				6E4730561A0F97ED008F2C27 /* Blumenkranz-Bridging-Header.h in Headers */,
-				6E47163319C614E1004F1BD3 /* VMCircularLoaderView.h in Headers */,
 				6ED4831F19043FAB00C82AA1 /* VMKeyProviding.h in Headers */,
 				6ED45C4619140D260022AAF9 /* VMActiveModelManipulating.h in Headers */,
 				6E0D7DBF18CD088100E99516 /* NSMutableArray+VMExtension.h in Headers */,
@@ -582,7 +680,9 @@
 				6ED4831B19043C2E00C82AA1 /* VMContextBindingManager.h in Headers */,
 				6EA2F4A819155EF200D4DCFC /* VMValidatableModel.h in Headers */,
 				6E7DBA0018CB89E6004B876C /* NSArray+VMExtension.h in Headers */,
+				6E47163319C614E1004F1BD3 /* VMCircularLoaderView.h in Headers */,
 				6E839A3C18CB893700664C67 /* NSDictionary+VMExtension.h in Headers */,
+				6E2677A01A17FD8300A42ECB /* VMSingletone.h in Headers */,
 				6ED45C4819140F570022AAF9 /* VMActiveModelValidation.h in Headers */,
 				6E7DBA1118CB8C77004B876C /* NSObject+VMExtension.h in Headers */,
 				6EB7FCAE1A06D54500986315 /* CTBlockDescription.h in Headers */,
@@ -592,6 +692,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		6E26775C1A17FC7300A42ECB /* BlumenkranzFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E2677701A17FC7400A42ECB /* Build configuration list for PBXNativeTarget "BlumenkranzFramework" */;
+			buildPhases = (
+				6E2677581A17FC7300A42ECB /* Sources */,
+				6E2677591A17FC7300A42ECB /* Frameworks */,
+				6E26775A1A17FC7300A42ECB /* Headers */,
+				6E26775B1A17FC7300A42ECB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlumenkranzFramework;
+			productName = BlumenkranzFramework;
+			productReference = 6E26775D1A17FC7300A42ECB /* BlumenkranzFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		6E37F12218C8F734000BD94B /* Blumenkranz */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E37F14618C8F734000BD94B /* Build configuration list for PBXNativeTarget "Blumenkranz" */;
@@ -655,6 +773,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = VisualMyth;
 				TargetAttributes = {
+					6E26775C1A17FC7300A42ECB = {
+						CreatedOnToolsVersion = 6.1;
+					};
 					6E37F13218C8F734000BD94B = {
 						TestTargetID = 6E37F12218C8F734000BD94B;
 					};
@@ -674,14 +795,21 @@
 			projectRoot = "";
 			targets = (
 				6E37F12218C8F734000BD94B /* Blumenkranz */,
+				6E26775C1A17FC7300A42ECB /* BlumenkranzFramework */,
 				6EA8DAFD18C8FEB400F04908 /* Blumenkranz Resources */,
-				6EA8DAF318C8FCB200F04908 /* Blumenkranz Framework */,
 				6E37F13218C8F734000BD94B /* Blumenkranz Unit Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6E26775B1A17FC7300A42ECB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6E37F13118C8F734000BD94B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -712,22 +840,35 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"\n\n# Link the \"Current\" version to \"A\"\n/bin/ln -sfh A \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Headers\"\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/${PRODUCT_NAME}\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\n/bin/cp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"\n";
 		};
-		6EA8DAF918C8FD1900F04908 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -e\nset +u\n# Avoid recursively calling this script.\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\nSF_TARGET_NAME=${PROJECT_NAME}\nSF_EXECUTABLE_PATH=\"lib${SF_TARGET_NAME}.a\"\nSF_WRAPPER_NAME=\"${SF_TARGET_NAME}.framework\"\n\n# The following conditionals come from\n# https://github.com/kstenerud/iOS-Universal-Framework\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\nSF_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\nSF_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SF_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\nSF_OTHER_PLATFORM=iphonesimulator\nelse\nSF_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$SF_SDK_PLATFORM$ ]]\nthen\nSF_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${SF_OTHER_PLATFORM}\"\nelse\necho \"Could not find platform name from build products directory: $BUILT_PRODUCTS_DIR\"\nexit 1\nfi\n\n# Build the other platform.\nxcrun xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${SF_OTHER_PLATFORM}${SF_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" OBJROOT=\"${OBJROOT}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\" $ACTION\n\n# Smash the two static libraries into one fat binary and store it in the .framework\nxcrun lipo -create \"${BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" -output \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"\n\n# Copy the binary to the other architecture folder to have a complete framework in both.\ncp -a \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"\n";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6E2677581A17FC7300A42ECB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E2677821A17FD2500A42ECB /* VMValidatableModel.m in Sources */,
+				6E2677801A17FD2500A42ECB /* VMActiveModel.m in Sources */,
+				6E2677B21A17FDA600A42ECB /* UIImage+VMExtension.m in Sources */,
+				6E2677B01A17FDA600A42ECB /* UIColor+VMExtension.m in Sources */,
+				6E26778E1A17FD5200A42ECB /* VMContextBindingManager.m in Sources */,
+				6E2677991A17FD7500A42ECB /* NSString+VMExtension.m in Sources */,
+				6E2677A81A17FD8C00A42ECB /* NSMutableArray+VMExtension.m in Sources */,
+				6E2677A41A17FD8C00A42ECB /* NSMutableDictionary+VMExtension.m in Sources */,
+				6E2677A61A17FD8C00A42ECB /* NSArray+VMExtension.m in Sources */,
+				6E2677AA1A17FD9600A42ECB /* VMViewController.m in Sources */,
+				6E26779B1A17FD7A00A42ECB /* NSObject+VMExtension.m in Sources */,
+				6E2677891A17FD5200A42ECB /* VMContext.m in Sources */,
+				6E2677901A17FD5800A42ECB /* VMGameCenterService.m in Sources */,
+				6E2677AE1A17FDA100A42ECB /* VMSequenceView.m in Sources */,
+				6E2677AC1A17FD9C00A42ECB /* VMCircularLoaderView.m in Sources */,
+				6E2677941A17FD6700A42ECB /* CTBlockDescription.m in Sources */,
+				6E2677971A17FD7000A42ECB /* VMClassCheckUtils.m in Sources */,
+				6E2677921A17FD6200A42ECB /* VMRandom.m in Sources */,
+				6E2677A21A17FD8C00A42ECB /* NSDictionary+VMExtension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6E37F11F18C8F734000BD94B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -742,7 +883,6 @@
 				6E0D7DBC18CCFF4200E99516 /* NSMutableDictionary+VMExtension.m in Sources */,
 				6E9B1A4418CDE3EE0024FF97 /* VMSequenceView.m in Sources */,
 				6EB7FCAF1A06D54500986315 /* CTBlockDescription.m in Sources */,
-				6E4730541A0F9756008F2C27 /* VMYandexTrafficDataProvider.swift in Sources */,
 				6E7DBA1F18CB9739004B876C /* NSString+VMExtension.m in Sources */,
 				6E7DBA0A18CB8A8B004B876C /* UIImage+VMExtension.m in Sources */,
 				6ED45C4419140CE50022AAF9 /* VMActiveModel.m in Sources */,
@@ -790,24 +930,71 @@
 			target = 6E37F12218C8F734000BD94B /* Blumenkranz */;
 			targetProxy = 6E37F13918C8F734000BD94B /* PBXContainerItemProxy */;
 		};
-		6EA8DAF818C8FCDD00F04908 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6E37F12218C8F734000BD94B /* Blumenkranz */;
-			targetProxy = 6EA8DAF718C8FCDD00F04908 /* PBXContainerItemProxy */;
-		};
 		6EA8DB0C18C8FFCC00F04908 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6EA8DAFD18C8FEB400F04908 /* Blumenkranz Resources */;
 			targetProxy = 6EA8DB0B18C8FFCC00F04908 /* PBXContainerItemProxy */;
 		};
-		6EA8DB0E18C8FFDA00F04908 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6EA8DAFD18C8FEB400F04908 /* Blumenkranz Resources */;
-			targetProxy = 6EA8DB0D18C8FFDA00F04908 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		6E2677711A17FC7400A42ECB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = BlumenkranzFramework/BlumenkranzFramework.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = BlumenkranzFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6E2677721A17FC7400A42ECB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = BlumenkranzFramework/BlumenkranzFramework.pch;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = BlumenkranzFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		6E37F14418C8F734000BD94B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -954,20 +1141,6 @@
 			};
 			name = Release;
 		};
-		6EA8DAF518C8FCB200F04908 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		6EA8DAF618C8FCB200F04908 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		6EA8DB0918C8FEB500F04908 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1009,6 +1182,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6E2677701A17FC7400A42ECB /* Build configuration list for PBXNativeTarget "BlumenkranzFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E2677711A17FC7400A42ECB /* Debug */,
+				6E2677721A17FC7400A42ECB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		6E37F11E18C8F734000BD94B /* Build configuration list for PBXProject "Blumenkranz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1032,15 +1213,6 @@
 			buildConfigurations = (
 				6E37F14A18C8F734000BD94B /* Debug */,
 				6E37F14B18C8F734000BD94B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6EA8DAF418C8FCB200F04908 /* Build configuration list for PBXAggregateTarget "Blumenkranz Framework" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6EA8DAF518C8FCB200F04908 /* Debug */,
-				6EA8DAF618C8FCB200F04908 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
