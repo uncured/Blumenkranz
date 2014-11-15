@@ -73,7 +73,7 @@
 		6E2677B01A17FDA600A42ECB /* UIColor+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7DBA0418CB8A31004B876C /* UIColor+VMExtension.m */; };
 		6E2677B11A17FDA600A42ECB /* UIImage+VMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E7DBA0718CB8A8B004B876C /* UIImage+VMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E2677B21A17FDA600A42ECB /* UIImage+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E7DBA0818CB8A8B004B876C /* UIImage+VMExtension.m */; };
-		6E2677B41A17FDE700A42ECB /* Blumenkranz.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E37F12B18C8F734000BD94B /* Blumenkranz.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E2677B81A18004100A42ECB /* libBlumenkranz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E37F12318C8F734000BD94B /* libBlumenkranz.a */; };
 		6E37F12718C8F734000BD94B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E37F12618C8F734000BD94B /* Foundation.framework */; };
 		6E37F13518C8F734000BD94B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E37F13418C8F734000BD94B /* XCTest.framework */; };
 		6E37F13618C8F734000BD94B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E37F12618C8F734000BD94B /* Foundation.framework */; };
@@ -138,6 +138,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6E2677B61A18003A00A42ECB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E37F11B18C8F734000BD94B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E37F12218C8F734000BD94B;
+			remoteInfo = Blumenkranz;
+		};
 		6E37F13918C8F734000BD94B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6E37F11B18C8F734000BD94B /* Project object */;
@@ -238,6 +245,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E2677B81A18004100A42ECB /* libBlumenkranz.a in Frameworks */,
 				6E26777D1A17FCBB00A42ECB /* GameKit.framework in Frameworks */,
 				6E26777C1A17FCB300A42ECB /* Foundation.framework in Frameworks */,
 				6E26777B1A17FCAE00A42ECB /* UIKit.framework in Frameworks */,
@@ -640,7 +648,6 @@
 				6E2677A71A17FD8C00A42ECB /* NSMutableArray+VMExtension.h in Headers */,
 				6E2677A91A17FD9600A42ECB /* VMViewController.h in Headers */,
 				6E2677811A17FD2500A42ECB /* VMValidatableModel.h in Headers */,
-				6E2677B41A17FDE700A42ECB /* Blumenkranz.h in Headers */,
 				6E2677961A17FD7000A42ECB /* VMClassCheckUtils.h in Headers */,
 				6E26779C1A17FD8300A42ECB /* VMAssertion.h in Headers */,
 				6E2677981A17FD7500A42ECB /* NSString+VMExtension.h in Headers */,
@@ -704,6 +711,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				6E2677B71A18003A00A42ECB /* PBXTargetDependency */,
 			);
 			name = BlumenkranzFramework;
 			productName = BlumenkranzFramework;
@@ -717,7 +725,6 @@
 				6E37F11F18C8F734000BD94B /* Sources */,
 				6E37F12018C8F734000BD94B /* Frameworks */,
 				6EA8DAEF18C8FB8100F04908 /* Headers */,
-				6EA8DAF218C8FC4F00F04908 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -826,22 +833,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		6EA8DAF218C8FC4F00F04908 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"\n\n# Link the \"Current\" version to \"A\"\n/bin/ln -sfh A \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Headers\"\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/${PRODUCT_NAME}\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\n/bin/cp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		6E2677581A17FC7300A42ECB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -925,6 +916,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6E2677B71A18003A00A42ECB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E37F12218C8F734000BD94B /* Blumenkranz */;
+			targetProxy = 6E2677B61A18003A00A42ECB /* PBXContainerItemProxy */;
+		};
 		6E37F13A18C8F734000BD94B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6E37F12218C8F734000BD94B /* Blumenkranz */;
