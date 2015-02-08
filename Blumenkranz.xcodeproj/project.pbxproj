@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E072C141A87ED180048250B /* VMPinButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E072C0E1A87ED180048250B /* VMPinButton.h */; };
+		6E072C151A87ED180048250B /* VMPinButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E072C0E1A87ED180048250B /* VMPinButton.h */; };
+		6E072C161A87ED180048250B /* VMPinButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E072C0F1A87ED180048250B /* VMPinButton.m */; };
+		6E072C171A87ED180048250B /* VMPinButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E072C0F1A87ED180048250B /* VMPinButton.m */; };
+		6E072C181A87ED180048250B /* VMPinInput.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E072C101A87ED180048250B /* VMPinInput.h */; };
+		6E072C191A87ED180048250B /* VMPinInput.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E072C101A87ED180048250B /* VMPinInput.h */; };
+		6E072C1A1A87ED180048250B /* VMPinInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E072C111A87ED180048250B /* VMPinInput.m */; };
+		6E072C1B1A87ED180048250B /* VMPinInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E072C111A87ED180048250B /* VMPinInput.m */; };
+		6E072C1C1A87ED180048250B /* VMPinPad.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E072C121A87ED180048250B /* VMPinPad.h */; };
+		6E072C1D1A87ED180048250B /* VMPinPad.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E072C121A87ED180048250B /* VMPinPad.h */; };
+		6E072C1E1A87ED180048250B /* VMPinPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E072C131A87ED180048250B /* VMPinPad.m */; };
+		6E072C1F1A87ED180048250B /* VMPinPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E072C131A87ED180048250B /* VMPinPad.m */; };
 		6E0D7DBB18CCFF4200E99516 /* NSMutableDictionary+VMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E0D7DB918CCFF4200E99516 /* NSMutableDictionary+VMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E0D7DBC18CCFF4200E99516 /* NSMutableDictionary+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D7DBA18CCFF4200E99516 /* NSMutableDictionary+VMExtension.m */; };
 		6E0D7DBF18CD088100E99516 /* NSMutableArray+VMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E0D7DBD18CD088100E99516 /* NSMutableArray+VMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -162,6 +174,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E072C0E1A87ED180048250B /* VMPinButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMPinButton.h; sourceTree = "<group>"; };
+		6E072C0F1A87ED180048250B /* VMPinButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMPinButton.m; sourceTree = "<group>"; };
+		6E072C101A87ED180048250B /* VMPinInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMPinInput.h; sourceTree = "<group>"; };
+		6E072C111A87ED180048250B /* VMPinInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMPinInput.m; sourceTree = "<group>"; };
+		6E072C121A87ED180048250B /* VMPinPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMPinPad.h; sourceTree = "<group>"; };
+		6E072C131A87ED180048250B /* VMPinPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMPinPad.m; sourceTree = "<group>"; };
 		6E0D7DB918CCFF4200E99516 /* NSMutableDictionary+VMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+VMExtension.h"; sourceTree = "<group>"; };
 		6E0D7DBA18CCFF4200E99516 /* NSMutableDictionary+VMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+VMExtension.m"; sourceTree = "<group>"; };
 		6E0D7DBD18CD088100E99516 /* NSMutableArray+VMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+VMExtension.h"; sourceTree = "<group>"; };
@@ -287,6 +305,12 @@
 		6E072C0D1A87E9520048250B /* VMPinPad */ = {
 			isa = PBXGroup;
 			children = (
+				6E072C0E1A87ED180048250B /* VMPinButton.h */,
+				6E072C0F1A87ED180048250B /* VMPinButton.m */,
+				6E072C101A87ED180048250B /* VMPinInput.h */,
+				6E072C111A87ED180048250B /* VMPinInput.m */,
+				6E072C121A87ED180048250B /* VMPinPad.h */,
+				6E072C131A87ED180048250B /* VMPinPad.m */,
 			);
 			path = VMPinPad;
 			sourceTree = "<group>";
@@ -629,10 +653,12 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E072C1D1A87ED180048250B /* VMPinPad.h in Headers */,
 				6E2677621A17FC7400A42ECB /* BlumenkranzFramework.h in Headers */,
 				6E26779D1A17FD8300A42ECB /* VMTypes.h in Headers */,
 				6E2677A11A17FD8C00A42ECB /* NSDictionary+VMExtension.h in Headers */,
 				6E26779F1A17FD8300A42ECB /* VMSingletone.h in Headers */,
+				6E072C191A87ED180048250B /* VMPinInput.h in Headers */,
 				6E26778A1A17FD5200A42ECB /* VMInjection.h in Headers */,
 				6E2677951A17FD6C00A42ECB /* VMLog.h in Headers */,
 				6E2677881A17FD5200A42ECB /* VMContext.h in Headers */,
@@ -650,6 +676,7 @@
 				6E2677841A17FD2500A42ECB /* VMModelValidating.h in Headers */,
 				6E26778F1A17FD5800A42ECB /* VMGameCenterService.h in Headers */,
 				6E2677AF1A17FDA600A42ECB /* UIColor+VMExtension.h in Headers */,
+				6E072C151A87ED180048250B /* VMPinButton.h in Headers */,
 				6E2677851A17FD2500A42ECB /* VMActiveModelValidation.h in Headers */,
 				6E2677B11A17FDA600A42ECB /* UIImage+VMExtension.h in Headers */,
 				6E26779E1A17FD8300A42ECB /* VMPlatform.h in Headers */,
@@ -675,6 +702,7 @@
 				6E2677871A17FD4A00A42ECB /* VMContextProviding.h in Headers */,
 				6ED45C4319140CE50022AAF9 /* VMActiveModel.h in Headers */,
 				6ED4831F19043FAB00C82AA1 /* VMKeyProviding.h in Headers */,
+				6E072C1C1A87ED180048250B /* VMPinPad.h in Headers */,
 				6ED45C4619140D260022AAF9 /* VMActiveModelManipulating.h in Headers */,
 				6E0D7DBF18CD088100E99516 /* NSMutableArray+VMExtension.h in Headers */,
 				6E1C97D618F477CA008059A8 /* VMContext.h in Headers */,
@@ -687,8 +715,10 @@
 				6E9B1A4618CDE5810024FF97 /* VMPlatform.h in Headers */,
 				6E7DBA1518CB8D0A004B876C /* VMRandom.h in Headers */,
 				6ED483231904445E00C82AA1 /* VMLog.h in Headers */,
+				6E072C141A87ED180048250B /* VMPinButton.h in Headers */,
 				6EA2F4AB19155F1100D4DCFC /* VMModelValidating.h in Headers */,
 				6EA8DB1418C9019300F04908 /* VMBlumenkranz.h in Headers */,
+				6E072C181A87ED180048250B /* VMPinInput.h in Headers */,
 				6E7DBA0D18CB8AD9004B876C /* VMAssertion.h in Headers */,
 				6E1C97D118F4732D008059A8 /* VMViewController.h in Headers */,
 				6E1C97DD18F47C7A008059A8 /* VMClassCheckUtils.h in Headers */,
@@ -848,7 +878,9 @@
 			files = (
 				6E2677821A17FD2500A42ECB /* VMValidatableModel.m in Sources */,
 				6E2677801A17FD2500A42ECB /* VMActiveModel.m in Sources */,
+				6E072C171A87ED180048250B /* VMPinButton.m in Sources */,
 				6E2677B21A17FDA600A42ECB /* UIImage+VMExtension.m in Sources */,
+				6E072C1F1A87ED180048250B /* VMPinPad.m in Sources */,
 				6E2677B01A17FDA600A42ECB /* UIColor+VMExtension.m in Sources */,
 				6E26778E1A17FD5200A42ECB /* VMContextBindingManager.m in Sources */,
 				6E2677991A17FD7500A42ECB /* NSString+VMExtension.m in Sources */,
@@ -863,6 +895,7 @@
 				6E2677AC1A17FD9C00A42ECB /* VMCircularLoaderView.m in Sources */,
 				6E2677941A17FD6700A42ECB /* CTBlockDescription.m in Sources */,
 				6E2677971A17FD7000A42ECB /* VMClassCheckUtils.m in Sources */,
+				6E072C1B1A87ED180048250B /* VMPinInput.m in Sources */,
 				6E2677921A17FD6200A42ECB /* VMRandom.m in Sources */,
 				6E2677A21A17FD8C00A42ECB /* NSDictionary+VMExtension.m in Sources */,
 			);
@@ -884,6 +917,8 @@
 				6EB7FCAF1A06D54500986315 /* CTBlockDescription.m in Sources */,
 				6E7DBA1F18CB9739004B876C /* NSString+VMExtension.m in Sources */,
 				6E7DBA0A18CB8A8B004B876C /* UIImage+VMExtension.m in Sources */,
+				6E072C161A87ED180048250B /* VMPinButton.m in Sources */,
+				6E072C1A1A87ED180048250B /* VMPinInput.m in Sources */,
 				6ED45C4419140CE50022AAF9 /* VMActiveModel.m in Sources */,
 				6EA2F4A919155EF200D4DCFC /* VMValidatableModel.m in Sources */,
 				6EFA223218CBAA6200F7EA40 /* VMGameCenterService.m in Sources */,
@@ -892,6 +927,7 @@
 				6E1C97D718F477CA008059A8 /* VMContext.m in Sources */,
 				6E839A3D18CB893700664C67 /* NSDictionary+VMExtension.m in Sources */,
 				6E47163419C614E1004F1BD3 /* VMCircularLoaderView.m in Sources */,
+				6E072C1E1A87ED180048250B /* VMPinPad.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
