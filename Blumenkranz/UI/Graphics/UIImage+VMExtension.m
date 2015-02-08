@@ -1,5 +1,6 @@
 #import "UIImage+VMExtension.h"
 #import "VMSingletone.h"
+#import "VMAssertion.h"
 
 static UIImage* vm_HollowPatternInner() {
     CGFloat side = 16;
@@ -34,6 +35,58 @@ static UIImage* vm_HollowPatternInner() {
 
 + (UIImage *)hollowPattern {
     VMStoreAndReturn( vm_HollowPatternInner() )
+}
+
++ (UIImage *)imageFromPattern:(UIImage *)pattern withColor:(UIColor *)color {
+    VMExist(pattern);
+
+    CGColorRef patternColor = (color ? [color CGColor] : [[UIColor whiteColor] CGColor]);
+    CGImageRef maskRef = pattern.CGImage;
+    UIGraphicsBeginImageContext(CGSizeMake(CGImageGetWidth(maskRef), CGImageGetHeight(maskRef)));
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, patternColor);
+    CGContextFillRect(context, CGRectMake(0, 0, CGImageGetWidth(maskRef), CGImageGetHeight(maskRef)));
+    UIImage *colorImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+
+    CGImageRef mask = CGImageMaskCreate(
+            CGImageGetWidth(maskRef),
+            CGImageGetHeight(maskRef),
+            CGImageGetBitsPerComponent(maskRef),
+            CGImageGetBitsPerPixel(maskRef),
+            CGImageGetBytesPerRow(maskRef),
+            CGImageGetDataProvider(maskRef),
+            NULL,
+            false
+    );
+    CGImageRef masked = CGImageCreateWithMask([colorImage CGImage], mask);
+    CGImageRelease(mask);
+    UIImage *result = [UIImage imageWithCGImage:masked scale:[UIScreen mainScreen].scale orientation:UIImageOrientationUp];
+    CGImageRelease(masked);
+    return result;
+}
+
++ (UIImage *)roundedRectImageWithSize:(CGSize)size color:(UIColor *)color corners:(UIRectCorner)corners cornerRadius:(CGFloat)radius {
+    VMExist(color);
+    VMPositive(radius);
+
+    UIGraphicsBeginImageContextWithOptions(size, NO, 0);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+
+    CGFloat actualRadius = (corners ? radius : 0);
+    UIRectCorner actualCorners = (corners ? corners : UIRectCornerAllCorners);
+
+    UIBezierPath *bezierPath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, size.width, size.height) byRoundingCorners:actualCorners cornerRadii:CGSizeMake(actualRadius, actualRadius)];
+
+    [bezierPath addClip];
+
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, CGRectMake(0, 0, size.width, size.height));
+
+    UIImage *resultImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+
+    return [resultImage resizableImageWithCapInsets:UIEdgeInsetsMake(radius, radius, radius, radius)];
 }
 
 + (UIImage *)screenshotFromView:(UIView *)target {

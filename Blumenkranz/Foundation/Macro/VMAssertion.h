@@ -109,4 +109,18 @@
 #define VMNotEqual(leftObject, rightObject) \
     NSAssert(![leftObject isEqual:rightObject], @"Object [%@] is equal to [%@] in method %@.", leftObject, rightObject, NSStringFromSelector(_cmd)); \
 
+/*
+ * Check object to be positive
+ */
+#define VMPositive(object) \
+    NSAssert(object >= 0, @"Object [%@] is not positive in method %@.", object, NSStringFromSelector(_cmd)); \
+
+
+/*
+ * Check object to be negative
+ */
+#define VMNegative(object) \
+    NSAssert(object < 0, @"Object [%@] is not negative in method %@.", object, NSStringFromSelector(_cmd)); \
+
+
 #endif

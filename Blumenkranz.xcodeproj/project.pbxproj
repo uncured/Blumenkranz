@@ -284,6 +284,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E072C0D1A87E9520048250B /* VMPinPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VMPinPad;
+			sourceTree = "<group>";
+		};
 		6E1C97CD18F47232008059A8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -525,6 +532,7 @@
 		6E9B1A3F18CDE3DE0024FF97 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				6E072C0D1A87E9520048250B /* VMPinPad */,
 				6E47163019C614E1004F1BD3 /* VMCircularLoaderView */,
 				6E9B1A4018CDE3DE0024FF97 /* VMSequenceView */,
 			);
@@ -1185,6 +1193,7 @@
 				6E2677721A17FC7400A42ECB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6E37F11E18C8F734000BD94B /* Build configuration list for PBXProject "Blumenkranz" */ = {
 			isa = XCConfigurationList;
