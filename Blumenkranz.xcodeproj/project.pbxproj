@@ -23,6 +23,24 @@
 		6E0D7DBC18CCFF4200E99516 /* NSMutableDictionary+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D7DBA18CCFF4200E99516 /* NSMutableDictionary+VMExtension.m */; };
 		6E0D7DBF18CD088100E99516 /* NSMutableArray+VMExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E0D7DBD18CD088100E99516 /* NSMutableArray+VMExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E0D7DC018CD088100E99516 /* NSMutableArray+VMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D7DBE18CD088100E99516 /* NSMutableArray+VMExtension.m */; };
+		6E18DFB01B76AA150060E939 /* VMClassicSortings.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E18DFAE1B76AA150060E939 /* VMClassicSortings.h */; };
+		6E18DFB11B76AA150060E939 /* VMClassicSortings.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E18DFAE1B76AA150060E939 /* VMClassicSortings.h */; };
+		6E18DFB21B76AA150060E939 /* VMClassicSortings.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E18DFAF1B76AA150060E939 /* VMClassicSortings.m */; };
+		6E18DFB31B76AA150060E939 /* VMClassicSortings.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E18DFAF1B76AA150060E939 /* VMClassicSortings.m */; };
+		6E18DFB41B76AA150060E939 /* VMClassicSortings.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E18DFAF1B76AA150060E939 /* VMClassicSortings.m */; };
+		6E18DFBD1B76AE7A0060E939 /* VMDataParsing.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E18DFB71B76AE7A0060E939 /* VMDataParsing.h */; };
+		6E18DFBE1B76AE7A0060E939 /* VMDataParsing.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E18DFB71B76AE7A0060E939 /* VMDataParsing.h */; };
+		6E18DFBF1B76AE7A0060E939 /* VMDatasource.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E18DFB81B76AE7A0060E939 /* VMDatasource.h */; };
+		6E18DFC01B76AE7A0060E939 /* VMDatasource.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E18DFB81B76AE7A0060E939 /* VMDatasource.h */; };
+		6E18DFC11B76AE7A0060E939 /* VMDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E18DFB91B76AE7A0060E939 /* VMDatasource.m */; };
+		6E18DFC21B76AE7A0060E939 /* VMDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E18DFB91B76AE7A0060E939 /* VMDatasource.m */; };
+		6E18DFC31B76AE7A0060E939 /* VMDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E18DFB91B76AE7A0060E939 /* VMDatasource.m */; };
+		6E18DFC41B76AE7A0060E939 /* VMDatasourceLoading.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E18DFBA1B76AE7A0060E939 /* VMDatasourceLoading.h */; };
+		6E18DFC51B76AE7A0060E939 /* VMDatasourceLoading.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E18DFBA1B76AE7A0060E939 /* VMDatasourceLoading.h */; };
+		6E18DFC61B76AE7A0060E939 /* VMDatasourceStoring.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E18DFBB1B76AE7A0060E939 /* VMDatasourceStoring.h */; };
+		6E18DFC71B76AE7A0060E939 /* VMDatasourceStoring.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E18DFBB1B76AE7A0060E939 /* VMDatasourceStoring.h */; };
+		6E18DFC81B76AE7A0060E939 /* VMParsable.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E18DFBC1B76AE7A0060E939 /* VMParsable.h */; };
+		6E18DFC91B76AE7A0060E939 /* VMParsable.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E18DFBC1B76AE7A0060E939 /* VMParsable.h */; };
 		6E1C97D118F4732D008059A8 /* VMViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E1C97CF18F4732D008059A8 /* VMViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E1C97D218F4732D008059A8 /* VMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1C97D018F4732D008059A8 /* VMViewController.m */; };
 		6E1C97D618F477CA008059A8 /* VMContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E1C97D418F477CA008059A8 /* VMContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -184,6 +202,14 @@
 		6E0D7DBA18CCFF4200E99516 /* NSMutableDictionary+VMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+VMExtension.m"; sourceTree = "<group>"; };
 		6E0D7DBD18CD088100E99516 /* NSMutableArray+VMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+VMExtension.h"; sourceTree = "<group>"; };
 		6E0D7DBE18CD088100E99516 /* NSMutableArray+VMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+VMExtension.m"; sourceTree = "<group>"; };
+		6E18DFAE1B76AA150060E939 /* VMClassicSortings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMClassicSortings.h; sourceTree = "<group>"; };
+		6E18DFAF1B76AA150060E939 /* VMClassicSortings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMClassicSortings.m; sourceTree = "<group>"; };
+		6E18DFB71B76AE7A0060E939 /* VMDataParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMDataParsing.h; sourceTree = "<group>"; };
+		6E18DFB81B76AE7A0060E939 /* VMDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMDatasource.h; sourceTree = "<group>"; };
+		6E18DFB91B76AE7A0060E939 /* VMDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMDatasource.m; sourceTree = "<group>"; };
+		6E18DFBA1B76AE7A0060E939 /* VMDatasourceLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMDatasourceLoading.h; sourceTree = "<group>"; };
+		6E18DFBB1B76AE7A0060E939 /* VMDatasourceStoring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMDatasourceStoring.h; sourceTree = "<group>"; };
+		6E18DFBC1B76AE7A0060E939 /* VMParsable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMParsable.h; sourceTree = "<group>"; };
 		6E1C97CE18F472FF008059A8 /* VMSingletone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMSingletone.h; sourceTree = "<group>"; };
 		6E1C97CF18F4732D008059A8 /* VMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMViewController.h; sourceTree = "<group>"; };
 		6E1C97D018F4732D008059A8 /* VMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMViewController.m; sourceTree = "<group>"; };
@@ -315,6 +341,36 @@
 			path = VMPinPad;
 			sourceTree = "<group>";
 		};
+		6E18DFAD1B76A9920060E939 /* Sortings */ = {
+			isa = PBXGroup;
+			children = (
+				6E18DFAE1B76AA150060E939 /* VMClassicSortings.h */,
+				6E18DFAF1B76AA150060E939 /* VMClassicSortings.m */,
+			);
+			path = Sortings;
+			sourceTree = "<group>";
+		};
+		6E18DFB51B76AE7A0060E939 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				6E18DFB61B76AE7A0060E939 /* Datasource */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		6E18DFB61B76AE7A0060E939 /* Datasource */ = {
+			isa = PBXGroup;
+			children = (
+				6E18DFB71B76AE7A0060E939 /* VMDataParsing.h */,
+				6E18DFB81B76AE7A0060E939 /* VMDatasource.h */,
+				6E18DFB91B76AE7A0060E939 /* VMDatasource.m */,
+				6E18DFBA1B76AE7A0060E939 /* VMDatasourceLoading.h */,
+				6E18DFBB1B76AE7A0060E939 /* VMDatasourceStoring.h */,
+				6E18DFBC1B76AE7A0060E939 /* VMParsable.h */,
+			);
+			path = Datasource;
+			sourceTree = "<group>";
+		};
 		6E1C97CD18F47232008059A8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -402,6 +458,8 @@
 		6E37F12818C8F734000BD94B /* Blumenkranz */ = {
 			isa = PBXGroup;
 			children = (
+				6E18DFB51B76AE7A0060E939 /* Networking */,
+				6E18DFAD1B76A9920060E939 /* Sortings */,
 				6E4730501A0F96CC008F2C27 /* DataProviders */,
 				6ED45C4019140CB20022AAF9 /* ActiveModel */,
 				6ED4831D19043F4B00C82AA1 /* Interfaces */,
@@ -656,14 +714,19 @@
 				6E072C1D1A87ED180048250B /* VMPinPad.h in Headers */,
 				6E2677621A17FC7400A42ECB /* BlumenkranzFramework.h in Headers */,
 				6E26779D1A17FD8300A42ECB /* VMTypes.h in Headers */,
+				6E18DFB11B76AA150060E939 /* VMClassicSortings.h in Headers */,
 				6E2677A11A17FD8C00A42ECB /* NSDictionary+VMExtension.h in Headers */,
+				6E18DFBE1B76AE7A0060E939 /* VMDataParsing.h in Headers */,
 				6E26779F1A17FD8300A42ECB /* VMSingletone.h in Headers */,
+				6E18DFC71B76AE7A0060E939 /* VMDatasourceStoring.h in Headers */,
 				6E072C191A87ED180048250B /* VMPinInput.h in Headers */,
 				6E26778A1A17FD5200A42ECB /* VMInjection.h in Headers */,
 				6E2677951A17FD6C00A42ECB /* VMLog.h in Headers */,
+				6E18DFC91B76AE7A0060E939 /* VMParsable.h in Headers */,
 				6E2677881A17FD5200A42ECB /* VMContext.h in Headers */,
 				6E26778B1A17FD5200A42ECB /* VMContextInjecting.h in Headers */,
 				6E26779A1A17FD7A00A42ECB /* NSObject+VMExtension.h in Headers */,
+				6E18DFC51B76AE7A0060E939 /* VMDatasourceLoading.h in Headers */,
 				6E2677A31A17FD8C00A42ECB /* NSMutableDictionary+VMExtension.h in Headers */,
 				6E2677911A17FD6200A42ECB /* VMRandom.h in Headers */,
 				6E2677AB1A17FD9C00A42ECB /* VMCircularLoaderView.h in Headers */,
@@ -683,6 +746,7 @@
 				6E2677A71A17FD8C00A42ECB /* NSMutableArray+VMExtension.h in Headers */,
 				6E2677A91A17FD9600A42ECB /* VMViewController.h in Headers */,
 				6E2677811A17FD2500A42ECB /* VMValidatableModel.h in Headers */,
+				6E18DFC01B76AE7A0060E939 /* VMDatasource.h in Headers */,
 				6E2677961A17FD7000A42ECB /* VMClassCheckUtils.h in Headers */,
 				6E26779C1A17FD8300A42ECB /* VMAssertion.h in Headers */,
 				6E2677981A17FD7500A42ECB /* NSString+VMExtension.h in Headers */,
@@ -709,9 +773,13 @@
 				6EFA223618CBACC300F7EA40 /* VMTypes.h in Headers */,
 				6E7DBA0918CB8A8B004B876C /* UIImage+VMExtension.h in Headers */,
 				6ED483181904388E00C82AA1 /* VMContextInjecting.h in Headers */,
+				6E18DFBD1B76AE7A0060E939 /* VMDataParsing.h in Headers */,
+				6E18DFC41B76AE7A0060E939 /* VMDatasourceLoading.h in Headers */,
 				6E7DBA0518CB8A31004B876C /* UIColor+VMExtension.h in Headers */,
+				6E18DFC81B76AE7A0060E939 /* VMParsable.h in Headers */,
 				6ED483171904388E00C82AA1 /* VMInjection.h in Headers */,
 				6E0D7DBB18CCFF4200E99516 /* NSMutableDictionary+VMExtension.h in Headers */,
+				6E18DFB01B76AA150060E939 /* VMClassicSortings.h in Headers */,
 				6E9B1A4618CDE5810024FF97 /* VMPlatform.h in Headers */,
 				6E7DBA1518CB8D0A004B876C /* VMRandom.h in Headers */,
 				6ED483231904445E00C82AA1 /* VMLog.h in Headers */,
@@ -719,6 +787,7 @@
 				6EA2F4AB19155F1100D4DCFC /* VMModelValidating.h in Headers */,
 				6EA8DB1418C9019300F04908 /* VMBlumenkranz.h in Headers */,
 				6E072C181A87ED180048250B /* VMPinInput.h in Headers */,
+				6E18DFC61B76AE7A0060E939 /* VMDatasourceStoring.h in Headers */,
 				6E7DBA0D18CB8AD9004B876C /* VMAssertion.h in Headers */,
 				6E1C97D118F4732D008059A8 /* VMViewController.h in Headers */,
 				6E1C97DD18F47C7A008059A8 /* VMClassCheckUtils.h in Headers */,
@@ -730,6 +799,7 @@
 				6E2677A01A17FD8300A42ECB /* VMSingletone.h in Headers */,
 				6ED45C4819140F570022AAF9 /* VMActiveModelValidation.h in Headers */,
 				6E7DBA1118CB8C77004B876C /* NSObject+VMExtension.h in Headers */,
+				6E18DFBF1B76AE7A0060E939 /* VMDatasource.h in Headers */,
 				6EB7FCAE1A06D54500986315 /* CTBlockDescription.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -885,6 +955,7 @@
 				6E26778E1A17FD5200A42ECB /* VMContextBindingManager.m in Sources */,
 				6E2677991A17FD7500A42ECB /* NSString+VMExtension.m in Sources */,
 				6E2677A81A17FD8C00A42ECB /* NSMutableArray+VMExtension.m in Sources */,
+				6E18DFB31B76AA150060E939 /* VMClassicSortings.m in Sources */,
 				6E2677A41A17FD8C00A42ECB /* NSMutableDictionary+VMExtension.m in Sources */,
 				6E2677A61A17FD8C00A42ECB /* NSArray+VMExtension.m in Sources */,
 				6E2677AA1A17FD9600A42ECB /* VMViewController.m in Sources */,
@@ -898,6 +969,7 @@
 				6E072C1B1A87ED180048250B /* VMPinInput.m in Sources */,
 				6E2677921A17FD6200A42ECB /* VMRandom.m in Sources */,
 				6E2677A21A17FD8C00A42ECB /* NSDictionary+VMExtension.m in Sources */,
+				6E18DFC21B76AE7A0060E939 /* VMDatasource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -917,6 +989,7 @@
 				6EB7FCAF1A06D54500986315 /* CTBlockDescription.m in Sources */,
 				6E7DBA1F18CB9739004B876C /* NSString+VMExtension.m in Sources */,
 				6E7DBA0A18CB8A8B004B876C /* UIImage+VMExtension.m in Sources */,
+				6E18DFB21B76AA150060E939 /* VMClassicSortings.m in Sources */,
 				6E072C161A87ED180048250B /* VMPinButton.m in Sources */,
 				6E072C1A1A87ED180048250B /* VMPinInput.m in Sources */,
 				6ED45C4419140CE50022AAF9 /* VMActiveModel.m in Sources */,
@@ -926,6 +999,7 @@
 				6E1C97D218F4732D008059A8 /* VMViewController.m in Sources */,
 				6E1C97D718F477CA008059A8 /* VMContext.m in Sources */,
 				6E839A3D18CB893700664C67 /* NSDictionary+VMExtension.m in Sources */,
+				6E18DFC11B76AE7A0060E939 /* VMDatasource.m in Sources */,
 				6E47163419C614E1004F1BD3 /* VMCircularLoaderView.m in Sources */,
 				6E072C1E1A87ED180048250B /* VMPinPad.m in Sources */,
 			);
@@ -946,7 +1020,9 @@
 				6EB7FCA61A06D36600986315 /* ArrayTests.m in Sources */,
 				6EB7FCB41A06E39B00986315 /* NSArray+VMExtension.m in Sources */,
 				6EB7FCAA1A06D42800986315 /* ObjectTests.m in Sources */,
+				6E18DFC31B76AE7A0060E939 /* VMDatasource.m in Sources */,
 				6E47163519C614E1004F1BD3 /* VMCircularLoaderView.m in Sources */,
+				6E18DFB41B76AA150060E939 /* VMClassicSortings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
